@@ -1,0 +1,476 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		4146BCD105F6554C00AB7993 /* EyeTVPluginDefs.h in Headers */ = {isa = PBXBuildFile; fileRef = 4146BCD005F6554C00AB7993 /* EyeTVPluginDefs.h */; };
+		4CF16BB005D7ED3E00736E9B /* EyeTVEPGParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CF16BAE05D7ED3D00736E9B /* EyeTVEPGParser.m */; };
+		8D576314048677EA00EA77CD /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0AA1909FFE8422F4C02AAC07 /* CoreFoundation.framework */; };
+		8D5B49A804867FD3000E48DA /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8D5B49A704867FD3000E48DA /* InfoPlist.strings */; };
+		94F17A7E1324D7350045534A /* assoc.c in Sources */ = {isa = PBXBuildFile; fileRef = 94F17A5F1324D7350045534A /* assoc.c */; };
+		94F17A7F1324D7350045534A /* assoc.h in Headers */ = {isa = PBXBuildFile; fileRef = 94F17A601324D7350045534A /* assoc.h */; };
+		94F17A801324D7350045534A /* biop.c in Sources */ = {isa = PBXBuildFile; fileRef = 94F17A611324D7350045534A /* biop.c */; };
+		94F17A811324D7350045534A /* biop.h in Headers */ = {isa = PBXBuildFile; fileRef = 94F17A621324D7350045534A /* biop.h */; };
+		94F17A821324D7350045534A /* cache.c in Sources */ = {isa = PBXBuildFile; fileRef = 94F17A631324D7350045534A /* cache.c */; };
+		94F17A831324D7350045534A /* cache.h in Headers */ = {isa = PBXBuildFile; fileRef = 94F17A641324D7350045534A /* cache.h */; };
+		94F17A841324D7350045534A /* carousel.c in Sources */ = {isa = PBXBuildFile; fileRef = 94F17A651324D7350045534A /* carousel.c */; };
+		94F17A851324D7350045534A /* carousel.h in Headers */ = {isa = PBXBuildFile; fileRef = 94F17A661324D7350045534A /* carousel.h */; };
+		94F17A861324D7350045534A /* channels.c in Sources */ = {isa = PBXBuildFile; fileRef = 94F17A671324D7350045534A /* channels.c */; };
+		94F17A871324D7350045534A /* channels.h in Headers */ = {isa = PBXBuildFile; fileRef = 94F17A681324D7350045534A /* channels.h */; };
+		94F17A881324D7350045534A /* command.c in Sources */ = {isa = PBXBuildFile; fileRef = 94F17A691324D7350045534A /* command.c */; };
+		94F17A891324D7350045534A /* command.h in Headers */ = {isa = PBXBuildFile; fileRef = 94F17A6A1324D7350045534A /* command.h */; };
+		94F17A8A1324D7350045534A /* dsmcc.c in Sources */ = {isa = PBXBuildFile; fileRef = 94F17A6B1324D7350045534A /* dsmcc.c */; };
+		94F17A8B1324D7350045534A /* dsmcc.h in Headers */ = {isa = PBXBuildFile; fileRef = 94F17A6C1324D7350045534A /* dsmcc.h */; };
+		94F17A8C1324D7350045534A /* findmheg.c in Sources */ = {isa = PBXBuildFile; fileRef = 94F17A6D1324D7350045534A /* findmheg.c */; };
+		94F17A8D1324D7350045534A /* findmheg.h in Headers */ = {isa = PBXBuildFile; fileRef = 94F17A6E1324D7350045534A /* findmheg.h */; };
+		94F17A8E1324D7350045534A /* fs.c in Sources */ = {isa = PBXBuildFile; fileRef = 94F17A6F1324D7350045534A /* fs.c */; };
+		94F17A8F1324D7350045534A /* fs.h in Headers */ = {isa = PBXBuildFile; fileRef = 94F17A701324D7350045534A /* fs.h */; };
+		94F17A901324D7350045534A /* list.c in Sources */ = {isa = PBXBuildFile; fileRef = 94F17A711324D7350045534A /* list.c */; };
+		94F17A911324D7350045534A /* list.h in Headers */ = {isa = PBXBuildFile; fileRef = 94F17A721324D7350045534A /* list.h */; };
+		94F17A921324D7350045534A /* listen.c in Sources */ = {isa = PBXBuildFile; fileRef = 94F17A731324D7350045534A /* listen.c */; };
+		94F17A931324D7350045534A /* listen.h in Headers */ = {isa = PBXBuildFile; fileRef = 94F17A741324D7350045534A /* listen.h */; };
+		94F17A941324D7350045534A /* module.c in Sources */ = {isa = PBXBuildFile; fileRef = 94F17A751324D7350045534A /* module.c */; };
+		94F17A951324D7350045534A /* module.h in Headers */ = {isa = PBXBuildFile; fileRef = 94F17A761324D7350045534A /* module.h */; };
+		94F17A961324D7350045534A /* rb-download.c in Sources */ = {isa = PBXBuildFile; fileRef = 94F17A771324D7350045534A /* rb-download.c */; };
+		94F17A971324D7350045534A /* stream.c in Sources */ = {isa = PBXBuildFile; fileRef = 94F17A781324D7350045534A /* stream.c */; };
+		94F17A981324D7350045534A /* stream.h in Headers */ = {isa = PBXBuildFile; fileRef = 94F17A791324D7350045534A /* stream.h */; };
+		94F17A991324D7350045534A /* table.c in Sources */ = {isa = PBXBuildFile; fileRef = 94F17A7A1324D7350045534A /* table.c */; };
+		94F17A9A1324D7350045534A /* table.h in Headers */ = {isa = PBXBuildFile; fileRef = 94F17A7B1324D7350045534A /* table.h */; };
+		94F17A9B1324D7350045534A /* utils.c in Sources */ = {isa = PBXBuildFile; fileRef = 94F17A7C1324D7350045534A /* utils.c */; };
+		94F17A9C1324D7350045534A /* utils.h in Headers */ = {isa = PBXBuildFile; fileRef = 94F17A7D1324D7350045534A /* utils.h */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		089C167EFE841241C02AAC07 /* English */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		0AA1909FFE8422F4C02AAC07 /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = /System/Library/Frameworks/CoreFoundation.framework; sourceTree = "<absolute>"; };
+		4146BCD005F6554C00AB7993 /* EyeTVPluginDefs.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = EyeTVPluginDefs.h; sourceTree = "<group>"; };
+		4CF16BAE05D7ED3D00736E9B /* EyeTVEPGParser.m */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; fileEncoding = 30; path = EyeTVEPGParser.m; sourceTree = "<group>"; };
+		8D576316048677EA00EA77CD /* EyeTVPluginSampleX.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EyeTVPluginSampleX.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		8D576317048677EA00EA77CD /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		94F17A5F1324D7350045534A /* assoc.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = assoc.c; sourceTree = "<group>"; };
+		94F17A601324D7350045534A /* assoc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = assoc.h; sourceTree = "<group>"; };
+		94F17A611324D7350045534A /* biop.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = biop.c; sourceTree = "<group>"; };
+		94F17A621324D7350045534A /* biop.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = biop.h; sourceTree = "<group>"; };
+		94F17A631324D7350045534A /* cache.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = cache.c; sourceTree = "<group>"; };
+		94F17A641324D7350045534A /* cache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cache.h; sourceTree = "<group>"; };
+		94F17A651324D7350045534A /* carousel.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = carousel.c; sourceTree = "<group>"; };
+		94F17A661324D7350045534A /* carousel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = carousel.h; sourceTree = "<group>"; };
+		94F17A671324D7350045534A /* channels.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = channels.c; sourceTree = "<group>"; };
+		94F17A681324D7350045534A /* channels.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = channels.h; sourceTree = "<group>"; };
+		94F17A691324D7350045534A /* command.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = command.c; sourceTree = "<group>"; };
+		94F17A6A1324D7350045534A /* command.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = command.h; sourceTree = "<group>"; };
+		94F17A6B1324D7350045534A /* dsmcc.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = dsmcc.c; sourceTree = "<group>"; };
+		94F17A6C1324D7350045534A /* dsmcc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = dsmcc.h; sourceTree = "<group>"; };
+		94F17A6D1324D7350045534A /* findmheg.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = findmheg.c; sourceTree = "<group>"; };
+		94F17A6E1324D7350045534A /* findmheg.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = findmheg.h; sourceTree = "<group>"; };
+		94F17A6F1324D7350045534A /* fs.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = fs.c; sourceTree = "<group>"; };
+		94F17A701324D7350045534A /* fs.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = fs.h; sourceTree = "<group>"; };
+		94F17A711324D7350045534A /* list.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = list.c; sourceTree = "<group>"; };
+		94F17A721324D7350045534A /* list.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = list.h; sourceTree = "<group>"; };
+		94F17A731324D7350045534A /* listen.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = listen.c; sourceTree = "<group>"; };
+		94F17A741324D7350045534A /* listen.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = listen.h; sourceTree = "<group>"; };
+		94F17A751324D7350045534A /* module.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = module.c; sourceTree = "<group>"; };
+		94F17A761324D7350045534A /* module.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = module.h; sourceTree = "<group>"; };
+		94F17A771324D7350045534A /* rb-download.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = "rb-download.c"; sourceTree = "<group>"; };
+		94F17A781324D7350045534A /* stream.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = stream.c; sourceTree = "<group>"; };
+		94F17A791324D7350045534A /* stream.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = stream.h; sourceTree = "<group>"; };
+		94F17A7A1324D7350045534A /* table.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = table.c; sourceTree = "<group>"; };
+		94F17A7B1324D7350045534A /* table.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = table.h; sourceTree = "<group>"; };
+		94F17A7C1324D7350045534A /* utils.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = utils.c; sourceTree = "<group>"; };
+		94F17A7D1324D7350045534A /* utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = utils.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8D576313048677EA00EA77CD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D576314048677EA00EA77CD /* CoreFoundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		089C166AFE841209C02AAC07 /* EyeTVPluginSampleX */ = {
+			isa = PBXGroup;
+			children = (
+				08FB77AFFE84173DC02AAC07 /* Source */,
+				089C167CFE841241C02AAC07 /* Resources */,
+				089C1671FE841209C02AAC07 /* External Frameworks and Libraries */,
+				19C28FB6FE9D52B211CA2CBB /* Products */,
+			);
+			name = EyeTVPluginSampleX;
+			sourceTree = "<group>";
+		};
+		089C1671FE841209C02AAC07 /* External Frameworks and Libraries */ = {
+			isa = PBXGroup;
+			children = (
+				0AA1909FFE8422F4C02AAC07 /* CoreFoundation.framework */,
+			);
+			name = "External Frameworks and Libraries";
+			sourceTree = "<group>";
+		};
+		089C167CFE841241C02AAC07 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				8D576317048677EA00EA77CD /* Info.plist */,
+				8D5B49A704867FD3000E48DA /* InfoPlist.strings */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		08FB77AFFE84173DC02AAC07 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				94F17A5A1324D7270045534A /* rb-download */,
+				4146BCD005F6554C00AB7993 /* EyeTVPluginDefs.h */,
+				4CF16BAE05D7ED3D00736E9B /* EyeTVEPGParser.m */,
+			);
+			name = Source;
+			sourceTree = "<group>";
+		};
+		19C28FB6FE9D52B211CA2CBB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8D576316048677EA00EA77CD /* EyeTVPluginSampleX.bundle */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		94F17A5A1324D7270045534A /* rb-download */ = {
+			isa = PBXGroup;
+			children = (
+				94F17A5F1324D7350045534A /* assoc.c */,
+				94F17A601324D7350045534A /* assoc.h */,
+				94F17A611324D7350045534A /* biop.c */,
+				94F17A621324D7350045534A /* biop.h */,
+				94F17A631324D7350045534A /* cache.c */,
+				94F17A641324D7350045534A /* cache.h */,
+				94F17A651324D7350045534A /* carousel.c */,
+				94F17A661324D7350045534A /* carousel.h */,
+				94F17A671324D7350045534A /* channels.c */,
+				94F17A681324D7350045534A /* channels.h */,
+				94F17A691324D7350045534A /* command.c */,
+				94F17A6A1324D7350045534A /* command.h */,
+				94F17A6B1324D7350045534A /* dsmcc.c */,
+				94F17A6C1324D7350045534A /* dsmcc.h */,
+				94F17A6D1324D7350045534A /* findmheg.c */,
+				94F17A6E1324D7350045534A /* findmheg.h */,
+				94F17A6F1324D7350045534A /* fs.c */,
+				94F17A701324D7350045534A /* fs.h */,
+				94F17A711324D7350045534A /* list.c */,
+				94F17A721324D7350045534A /* list.h */,
+				94F17A731324D7350045534A /* listen.c */,
+				94F17A741324D7350045534A /* listen.h */,
+				94F17A751324D7350045534A /* module.c */,
+				94F17A761324D7350045534A /* module.h */,
+				94F17A771324D7350045534A /* rb-download.c */,
+				94F17A781324D7350045534A /* stream.c */,
+				94F17A791324D7350045534A /* stream.h */,
+				94F17A7A1324D7350045534A /* table.c */,
+				94F17A7B1324D7350045534A /* table.h */,
+				94F17A7C1324D7350045534A /* utils.c */,
+				94F17A7D1324D7350045534A /* utils.h */,
+			);
+			name = "rb-download";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		8D57630E048677EA00EA77CD /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4146BCD105F6554C00AB7993 /* EyeTVPluginDefs.h in Headers */,
+				94F17A7F1324D7350045534A /* assoc.h in Headers */,
+				94F17A811324D7350045534A /* biop.h in Headers */,
+				94F17A831324D7350045534A /* cache.h in Headers */,
+				94F17A851324D7350045534A /* carousel.h in Headers */,
+				94F17A871324D7350045534A /* channels.h in Headers */,
+				94F17A891324D7350045534A /* command.h in Headers */,
+				94F17A8B1324D7350045534A /* dsmcc.h in Headers */,
+				94F17A8D1324D7350045534A /* findmheg.h in Headers */,
+				94F17A8F1324D7350045534A /* fs.h in Headers */,
+				94F17A911324D7350045534A /* list.h in Headers */,
+				94F17A931324D7350045534A /* listen.h in Headers */,
+				94F17A951324D7350045534A /* module.h in Headers */,
+				94F17A981324D7350045534A /* stream.h in Headers */,
+				94F17A9A1324D7350045534A /* table.h in Headers */,
+				94F17A9C1324D7350045534A /* utils.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		8D57630D048677EA00EA77CD /* PlexTVServer */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 940237E70E1CDAF700619E65 /* Build configuration list for PBXNativeTarget "PlexTVServer" */;
+			buildPhases = (
+				8D57630E048677EA00EA77CD /* Headers */,
+				8D57630F048677EA00EA77CD /* Resources */,
+				8D576311048677EA00EA77CD /* Sources */,
+				8D576313048677EA00EA77CD /* Frameworks */,
+				8D576315048677EA00EA77CD /* Rez */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PlexTVServer;
+			productInstallPath = "$(HOME)/Library/Bundles";
+			productName = EyeTVPluginSampleX;
+			productReference = 8D576316048677EA00EA77CD /* EyeTVPluginSampleX.bundle */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		089C1669FE841209C02AAC07 /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = 940237E60E1CDAF700619E65 /* Build configuration list for PBXProject "EyeTVEPGParser" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 1;
+			knownRegions = (
+				English,
+				Japanese,
+				French,
+				German,
+			);
+			mainGroup = 089C166AFE841209C02AAC07 /* EyeTVPluginSampleX */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8D57630D048677EA00EA77CD /* PlexTVServer */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8D57630F048677EA00EA77CD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D5B49A804867FD3000E48DA /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXRezBuildPhase section */
+		8D576315048677EA00EA77CD /* Rez */ = {
+			isa = PBXRezBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXRezBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8D576311048677EA00EA77CD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4CF16BB005D7ED3E00736E9B /* EyeTVEPGParser.m in Sources */,
+				94F17A7E1324D7350045534A /* assoc.c in Sources */,
+				94F17A801324D7350045534A /* biop.c in Sources */,
+				94F17A821324D7350045534A /* cache.c in Sources */,
+				94F17A841324D7350045534A /* carousel.c in Sources */,
+				94F17A861324D7350045534A /* channels.c in Sources */,
+				94F17A881324D7350045534A /* command.c in Sources */,
+				94F17A8A1324D7350045534A /* dsmcc.c in Sources */,
+				94F17A8C1324D7350045534A /* findmheg.c in Sources */,
+				94F17A8E1324D7350045534A /* fs.c in Sources */,
+				94F17A901324D7350045534A /* list.c in Sources */,
+				94F17A921324D7350045534A /* listen.c in Sources */,
+				94F17A941324D7350045534A /* module.c in Sources */,
+				94F17A961324D7350045534A /* rb-download.c in Sources */,
+				94F17A971324D7350045534A /* stream.c in Sources */,
+				94F17A991324D7350045534A /* table.c in Sources */,
+				94F17A9B1324D7350045534A /* utils.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		8D5B49A704867FD3000E48DA /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				089C167EFE841241C02AAC07 /* English */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		940237E00E1CDAF600619E65 /* Development */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(NATIVE_ARCH_ACTUAL)";
+				HEADER_SEARCH_PATHS = "";
+				USER_HEADER_SEARCH_PATHS = "";
+			};
+			name = Development;
+		};
+		940237E10E1CDAF600619E65 /* Deployment */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+			};
+			name = Deployment;
+		};
+		940237E20E1CDAF600619E65 /* Default */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(NATIVE_ARCH_ACTUAL)";
+			};
+			name = Default;
+		};
+		940237E30E1CDAF600619E65 /* Development */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				DEBUGGING_SYMBOLS = YES;
+				FRAMEWORK_SEARCH_PATHS = "";
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_WARN_FOUR_CHARACTER_CONSTANTS = NO;
+				GCC_WARN_UNKNOWN_PRAGMAS = NO;
+				HEADER_SEARCH_PATHS = "";
+				INFOPLIST_FILE = Info.plist;
+				INSTALL_PATH = "$(HOME)/Library/Bundles";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+					"\"$(SRCROOT)/liveMedia/groupsock\"",
+					"\"$(SRCROOT)/liveMedia/UsageEnvironment\"",
+					"\"$(SRCROOT)/liveMedia\"",
+					"\"$(SRCROOT)/liveMedia/BasicUsageEnvironment\"",
+				);
+				LIBRARY_STYLE = Bundle;
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = PlexTVServer;
+				SECTORDER_FLAGS = "";
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+				);
+				WRAPPER_EXTENSION = bundle;
+				ZERO_LINK = YES;
+			};
+			name = Development;
+		};
+		940237E40E1CDAF600619E65 /* Deployment */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+				FRAMEWORK_SEARCH_PATHS = "";
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_WARN_FOUR_CHARACTER_CONSTANTS = NO;
+				GCC_WARN_UNKNOWN_PRAGMAS = NO;
+				HEADER_SEARCH_PATHS = "";
+				INFOPLIST_FILE = Info.plist;
+				INSTALL_PATH = "$(HOME)/Library/Bundles";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+					"\"$(SRCROOT)/liveMedia/groupsock\"",
+					"\"$(SRCROOT)/liveMedia/UsageEnvironment\"",
+					"\"$(SRCROOT)/liveMedia\"",
+					"\"$(SRCROOT)/liveMedia/BasicUsageEnvironment\"",
+				);
+				LIBRARY_STYLE = Bundle;
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = EyeTVPluginSampleX;
+				SECTORDER_FLAGS = "";
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+				);
+				WRAPPER_EXTENSION = bundle;
+				ZERO_LINK = NO;
+			};
+			name = Deployment;
+		};
+		940237E50E1CDAF600619E65 /* Default */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = "";
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_WARN_FOUR_CHARACTER_CONSTANTS = NO;
+				GCC_WARN_UNKNOWN_PRAGMAS = NO;
+				HEADER_SEARCH_PATHS = "";
+				INFOPLIST_FILE = Info.plist;
+				INSTALL_PATH = "$(HOME)/Library/Bundles";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+					"\"$(SRCROOT)/liveMedia/groupsock\"",
+					"\"$(SRCROOT)/liveMedia/UsageEnvironment\"",
+					"\"$(SRCROOT)/liveMedia\"",
+					"\"$(SRCROOT)/liveMedia/BasicUsageEnvironment\"",
+				);
+				LIBRARY_STYLE = Bundle;
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = EyeTVPluginSampleX;
+				SECTORDER_FLAGS = "";
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+				);
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Default;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		940237E60E1CDAF700619E65 /* Build configuration list for PBXProject "EyeTVEPGParser" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				940237E00E1CDAF600619E65 /* Development */,
+				940237E10E1CDAF600619E65 /* Deployment */,
+				940237E20E1CDAF600619E65 /* Default */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Default;
+		};
+		940237E70E1CDAF700619E65 /* Build configuration list for PBXNativeTarget "PlexTVServer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				940237E30E1CDAF600619E65 /* Development */,
+				940237E40E1CDAF600619E65 /* Deployment */,
+				940237E50E1CDAF600619E65 /* Default */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Default;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 089C1669FE841209C02AAC07 /* Project object */;
+}

@@ -1,0 +1,142 @@
+TPlexTVServer
+v7
+r0
+t321174635.301859
+cCheck dependencies
+cProcessInfoPlistFile /Volumes/HomeOld/HomeLinks/Downloads/EyeTVEPGParser/build/Deployment/EyeTVPluginSampleX.bundle/Contents/Info.plist Info.plist
+cCopyStringsFile /Volumes/HomeOld/HomeLinks/Downloads/EyeTVEPGParser/build/Deployment/EyeTVPluginSampleX.bundle/Contents/Resources/English.lproj/InfoPlist.strings English.lproj/InfoPlist.strings
+cCompileC build/EyeTVEPGParser.build/Deployment/PlexTVServer.build/Objects-normal/i386/EyeTVEPGParser.o /Volumes/HomeOld/HomeLinks/Downloads/EyeTVEPGParser/EyeTVEPGParser.m normal i386 objective-c++ com.apple.compilers.gcc.4_2
+cLd /Volumes/HomeOld/HomeLinks/Downloads/EyeTVEPGParser/build/Deployment/EyeTVPluginSampleX.bundle/Contents/MacOS/EyeTVPluginSampleX normal i386
+cTouch /Volumes/HomeOld/HomeLinks/Downloads/EyeTVEPGParser/build/Deployment/EyeTVPluginSampleX.bundle
+
+N/System/Library/Frameworks/Cocoa.framework/Headers/Cocoa.h
+c0000000040C4AA6800000000000001E5
+t1086630504
+s485
+
+N/System/Library/Frameworks/CoreFoundation.framework/CoreFoundation
+c000000004C971DAF0000000000781330
+t1284971951
+s7869232
+
+N/Volumes/HomeOld/HomeLinks/Downloads/EyeTVEPGParser/English.lproj/InfoPlist.strings
+c0000000049A90130000000000000022C
+t1235812656
+s556
+
+N/Volumes/HomeOld/HomeLinks/Downloads/EyeTVEPGParser/EyeTVEPGParser.m
+c000000004D74830C0000000000003E3B
+t1299481356
+s15931
+i"EyeTVPluginDefs.h"
+i<Cocoa/Cocoa.h>
+i<sys/socket.h>
+i<sys/un.h>
+
+N/Volumes/HomeOld/HomeLinks/Downloads/EyeTVEPGParser/EyeTVPluginDefs.h
+c0000000049A901300000000000001D6D
+t1235812656
+s7533
+
+N/Volumes/HomeOld/HomeLinks/Downloads/EyeTVEPGParser/build/Deployment/EyeTVPluginSampleX.bundle
+t1299481835
+s102
+
+N/Volumes/HomeOld/HomeLinks/Downloads/EyeTVEPGParser/build/Deployment/EyeTVPluginSampleX.bundle/Contents/Info.plist
+t1299481834
+s1621
+
+N/Volumes/HomeOld/HomeLinks/Downloads/EyeTVEPGParser/build/Deployment/EyeTVPluginSampleX.bundle/Contents/MacOS/EyeTVPluginSampleX
+t1299481835
+s12828
+
+N/Volumes/HomeOld/HomeLinks/Downloads/EyeTVEPGParser/build/Deployment/EyeTVPluginSampleX.bundle/Contents/Resources/English.lproj/InfoPlist.strings
+t1299481834
+s556
+
+N/Volumes/HomeOld/HomeLinks/Downloads/EyeTVEPGParser/build/EyeTVEPGParser.build/Deployment/PlexTVServer.build/Objects-normal/i386/EyeTVEPGParser.o
+t1299481835
+s4300
+
+N/Volumes/HomeOld/HomeLinks/Downloads/EyeTVEPGParser/build/EyeTVEPGParser.build/Deployment/PlexTVServer.build/Objects-normal/i386/EyeTVPluginSampleX.LinkFileList
+c000000004D7484EA0000000000000092
+t1299481834
+s146
+
+N/usr/include/sys/socket.h
+c000000004C4DE4B400000000000059BC
+t1280173236
+s22972
+
+N/usr/include/sys/un.h
+c000000004C4DE4B50000000000001072
+t1280173237
+s4210
+
+NInfo.plist
+c000000004D747F01000000000000047B
+t1299480321
+s1147
+
+CCheck dependencies
+r0
+lSLF07#2@18"Check dependencies321174634#321174634#0(0"0(0#1#0"8623395936#0"0#
+
+CCompileC build/EyeTVEPGParser.build/Deployment/PlexTVServer.build/Objects-normal/i386/EyeTVEPGParser.o /Volumes/HomeOld/HomeLinks/Downloads/EyeTVEPGParser/EyeTVEPGParser.m normal i386 objective-c++ com.apple.compilers.gcc.4_2
+s321174634.762332
+e321174635.290167
+r1
+xCompileC
+xbuild/EyeTVEPGParser.build/Deployment/PlexTVServer.build/Objects-normal/i386/EyeTVEPGParser.o
+x/Volumes/HomeOld/HomeLinks/Downloads/EyeTVEPGParser/EyeTVEPGParser.m
+xnormal
+xi386
+xobjective-c++
+xcom.apple.compilers.gcc.4_2
+o/Volumes/HomeOld/HomeLinks/Downloads/EyeTVEPGParser/EyeTVEPGParser.m:202:2: warning: #warning enable parser
+o/Volumes/HomeOld/HomeLinks/Downloads/EyeTVEPGParser/EyeTVEPGParser.m:228:2: warning: #warning disable parser
+o/Volumes/HomeOld/HomeLinks/Downloads/EyeTVEPGParser/EyeTVEPGParser.m: In function 'long int EyeTVEPGParserGetInformation(EyeTVEPGParserGlobals*, long int*, char*, char*)':
+o/Volumes/HomeOld/HomeLinks/Downloads/EyeTVEPGParser/EyeTVEPGParser.m:166: warning: deprecated conversion from string constant to 'char*'
+o/Volumes/HomeOld/HomeLinks/Downloads/EyeTVEPGParser/EyeTVEPGParser.m:172: warning: deprecated conversion from string constant to 'char*'
+lSLF07#2@76"Compile /Volumes/HomeOld/HomeLinks/Downloads/EyeTVEPGParser/EyeTVEPGParser.m321174634#321174635#0(663"/Volumes/HomeOld/HomeLinks/Downloads/EyeTVEPGParser/EyeTVEPGParser.m:202:2: warning: #warning enable parser/Volumes/HomeOld/HomeLinks/Downloads/EyeTVEPGParser/EyeTVEPGParser.m:228:2: warning: #warning disable parser/Volumes/HomeOld/HomeLinks/Downloads/EyeTVEPGParser/EyeTVEPGParser.m: In function 'long int EyeTVEPGParserGetInformation(EyeTVEPGParserGlobals*, long int*, char*, char*)':/Volumes/HomeOld/HomeLinks/Downloads/EyeTVEPGParser/EyeTVEPGParser.m:166: warning: deprecated conversion from string constant to 'char*'/Volumes/HomeOld/HomeLinks/Downloads/EyeTVEPGParser/EyeTVEPGParser.m:172: warning: deprecated conversion from string constant to 'char*'4(22@22"#warning enable parser321174634#0#108#0(6@68"/Volumes/HomeOld/HomeLinks/Downloads/EyeTVEPGParser/EyeTVEPGParser.m321174156#202#0#202#0#10"#warning *0(22@23"#warning disable parser321174634#108#109#0(6@68"/Volumes/HomeOld/HomeLinks/Downloads/EyeTVEPGParser/EyeTVEPGParser.m321174156#228#0#228#0#10"#warning *0(22@53"Deprecated conversion from string constant to 'char*'321174635#389#137#0(6@68"/Volumes/HomeOld/HomeLinks/Downloads/EyeTVEPGParser/EyeTVEPGParser.m321174156#166#0#166#0#49"deprecated conversion from string constant to '*'0(22@53"Deprecated conversion from string constant to 'char*'321174635#526#137#0(6@68"/Volumes/HomeOld/HomeLinks/Downloads/EyeTVEPGParser/EyeTVEPGParser.m321174156#172#0#172#0#49"deprecated conversion from string constant to '*'0(0#0#68"/Volumes/HomeOld/HomeLinks/Downloads/EyeTVEPGParser/EyeTVEPGParser.m8622923968#1067"    cd /Volumes/HomeOld/HomeLinks/Downloads/EyeTVEPGParser    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x objective-c++ -arch i386 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -Os -fvisibility-inlines-hidden -I/Volumes/HomeOld/HomeLinks/Downloads/EyeTVEPGParser/build/EyeTVEPGParser.build/Deployment/PlexTVServer.build/EyeTVPluginSampleX.hmap -Wmost -Wno-four-char-constants -Wno-unknown-pragmas -F/Volumes/HomeOld/HomeLinks/Downloads/EyeTVEPGParser/build/Deployment -I/Volumes/HomeOld/HomeLinks/Downloads/EyeTVEPGParser/build/Deployment/include -I/Volumes/HomeOld/HomeLinks/Downloads/EyeTVEPGParser/build/EyeTVEPGParser.build/Deployment/PlexTVServer.build/DerivedSources/i386 -I/Volumes/HomeOld/HomeLinks/Downloads/EyeTVEPGParser/build/EyeTVEPGParser.build/Deployment/PlexTVServer.build/DerivedSources -c /Volumes/HomeOld/HomeLinks/Downloads/EyeTVEPGParser/EyeTVEPGParser.m -o /Volumes/HomeOld/HomeLinks/Downloads/EyeTVEPGParser/build/EyeTVEPGParser.build/Deployment/PlexTVServer.build/Objects-normal/i386/EyeTVEPGParser.o0#
+
+CCopyStringsFile /Volumes/HomeOld/HomeLinks/Downloads/EyeTVEPGParser/build/Deployment/EyeTVPluginSampleX.bundle/Contents/Resources/English.lproj/InfoPlist.strings English.lproj/InfoPlist.strings
+s321174634.750081
+e321174634.762279
+r1
+xCopyStringsFile
+x/Volumes/HomeOld/HomeLinks/Downloads/EyeTVEPGParser/build/Deployment/EyeTVPluginSampleX.bundle/Contents/Resources/English.lproj/InfoPlist.strings
+xEnglish.lproj/InfoPlist.strings
+lSLF07#2@36"Copy English.lproj/InfoPlist.strings321174634#321174634#0(0"0(0#0#83"/Volumes/HomeOld/HomeLinks/Downloads/EyeTVEPGParser/English.lproj/InfoPlist.strings8623488096#411"    cd /Volumes/HomeOld/HomeLinks/Downloads/EyeTVEPGParser    setenv ICONV /usr/bin/iconv    /Developer/Library/Xcode/Plug-ins/CoreBuildTasks.xcplugin/Contents/Resources/copystrings --validate --inputencoding utf-16 --outputencoding UTF-16 English.lproj/InfoPlist.strings --outdir /Volumes/HomeOld/HomeLinks/Downloads/EyeTVEPGParser/build/Deployment/EyeTVPluginSampleX.bundle/Contents/Resources/English.lproj0#
+
+CLd /Volumes/HomeOld/HomeLinks/Downloads/EyeTVEPGParser/build/Deployment/EyeTVPluginSampleX.bundle/Contents/MacOS/EyeTVPluginSampleX normal i386
+s321174635.290219
+e321174635.300524
+r1
+xLd
+x/Volumes/HomeOld/HomeLinks/Downloads/EyeTVEPGParser/build/Deployment/EyeTVPluginSampleX.bundle/Contents/MacOS/EyeTVPluginSampleX
+xnormal
+xi386
+old: warning: directory '/Volumes/HomeOld/HomeLinks/Downloads/EyeTVEPGParser/liveMedia/groupsock' following -L not found
+old: warning: directory '/Volumes/HomeOld/HomeLinks/Downloads/EyeTVEPGParser/liveMedia/UsageEnvironment' following -L not found
+old: warning: directory '/Volumes/HomeOld/HomeLinks/Downloads/EyeTVEPGParser/liveMedia' following -L not found
+old: warning: directory '/Volumes/HomeOld/HomeLinks/Downloads/EyeTVEPGParser/liveMedia/BasicUsageEnvironment' following -L not found
+lSLF07#2@133"Link /Volumes/HomeOld/HomeLinks/Downloads/EyeTVEPGParser/build/Deployment/EyeTVPluginSampleX.bundle/Contents/MacOS/EyeTVPluginSampleX321174635#321174635#0(489"ld: warning: directory '/Volumes/HomeOld/HomeLinks/Downloads/EyeTVEPGParser/liveMedia/groupsock' following -L not foundld: warning: directory '/Volumes/HomeOld/HomeLinks/Downloads/EyeTVEPGParser/liveMedia/UsageEnvironment' following -L not foundld: warning: directory '/Volumes/HomeOld/HomeLinks/Downloads/EyeTVEPGParser/liveMedia' following -L not foundld: warning: directory '/Volumes/HomeOld/HomeLinks/Downloads/EyeTVEPGParser/liveMedia/BasicUsageEnvironment' following -L not found4(22@106"Directory '/Volumes/HomeOld/HomeLinks/Downloads/EyeTVEPGParser/liveMedia/groupsock' following -L not found321174635#0#120#0(6@0"321174635#0#0#0#0#0"0(22@113"Directory '/Volumes/HomeOld/HomeLinks/Downloads/EyeTVEPGParser/liveMedia/UsageEnvironment' following -L not found321174635#120#127#0(6@0"321174635#0#0#0#0#0"0(22@96"Directory '/Volumes/HomeOld/HomeLinks/Downloads/EyeTVEPGParser/liveMedia' following -L not found321174635#247#110#0(6@0"321174635#0#0#0#0#0"0(22@118"Directory '/Volumes/HomeOld/HomeLinks/Downloads/EyeTVEPGParser/liveMedia/BasicUsageEnvironment' following -L not found321174635#357#132#0(6@0"321174635#0#0#0#0#0"0(0#0#0"8623706976#939"    cd /Volumes/HomeOld/HomeLinks/Downloads/EyeTVEPGParser    /Developer/usr/bin/g++-4.2 -arch i386 -bundle -L/Volumes/HomeOld/HomeLinks/Downloads/EyeTVEPGParser/build/Deployment -L/Volumes/HomeOld/HomeLinks/Downloads/EyeTVEPGParser -L/Volumes/HomeOld/HomeLinks/Downloads/EyeTVEPGParser/liveMedia/groupsock -L/Volumes/HomeOld/HomeLinks/Downloads/EyeTVEPGParser/liveMedia/UsageEnvironment -L/Volumes/HomeOld/HomeLinks/Downloads/EyeTVEPGParser/liveMedia -L/Volumes/HomeOld/HomeLinks/Downloads/EyeTVEPGParser/liveMedia/BasicUsageEnvironment -F/Volumes/HomeOld/HomeLinks/Downloads/EyeTVEPGParser/build/Deployment -filelist /Volumes/HomeOld/HomeLinks/Downloads/EyeTVEPGParser/build/EyeTVEPGParser.build/Deployment/PlexTVServer.build/Objects-normal/i386/EyeTVPluginSampleX.LinkFileList -framework CoreFoundation -o /Volumes/HomeOld/HomeLinks/Downloads/EyeTVEPGParser/build/Deployment/EyeTVPluginSampleX.bundle/Contents/MacOS/EyeTVPluginSampleX0#
+
+CProcessInfoPlistFile /Volumes/HomeOld/HomeLinks/Downloads/EyeTVEPGParser/build/Deployment/EyeTVPluginSampleX.bundle/Contents/Info.plist Info.plist
+s321174634.735439
+e321174634.750039
+r1
+xProcessInfoPlistFile
+x/Volumes/HomeOld/HomeLinks/Downloads/EyeTVEPGParser/build/Deployment/EyeTVPluginSampleX.bundle/Contents/Info.plist
+xInfo.plist
+lSLF07#2@18"Process Info.plist321174634#321174634#0(0"0(0#0#62"/Volumes/HomeOld/HomeLinks/Downloads/EyeTVEPGParser/Info.plist8606832608#255"    cd /Volumes/HomeOld/HomeLinks/Downloads/EyeTVEPGParser    builtin-infoPlistUtility Info.plist -expandbuildsettings -platform macosx -o /Volumes/HomeOld/HomeLinks/Downloads/EyeTVEPGParser/build/Deployment/EyeTVPluginSampleX.bundle/Contents/Info.plist0#
+
+CTouch /Volumes/HomeOld/HomeLinks/Downloads/EyeTVEPGParser/build/Deployment/EyeTVPluginSampleX.bundle
+s321174635.300583
+e321174635.301842
+r1
+xTouch
+x/Volumes/HomeOld/HomeLinks/Downloads/EyeTVEPGParser/build/Deployment/EyeTVPluginSampleX.bundle
+lSLF07#2@100"Touch /Volumes/HomeOld/HomeLinks/Downloads/EyeTVEPGParser/build/Deployment/EyeTVPluginSampleX.bundle321174635#321174635#0(0"0(0#0#0"8623581248#176"    cd /Volumes/HomeOld/HomeLinks/Downloads/EyeTVEPGParser    /usr/bin/touch -c /Volumes/HomeOld/HomeLinks/Downloads/EyeTVEPGParser/build/Deployment/EyeTVPluginSampleX.bundle0#
+

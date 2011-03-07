@@ -1,0 +1,366 @@
+// !$*UTF8*$!
+{
+	089C1669FE841209C02AAC07 /* Project object */ = {
+		activeBuildConfigurationName = Deployment;
+		activeExecutable = 945821DD0F5939220049DE15 /* EyeTV */;
+		activeTarget = 8D57630D048677EA00EA77CD /* PlexTVServer */;
+		addToTargets = (
+			8D57630D048677EA00EA77CD /* PlexTVServer */,
+		);
+		breakpoints = (
+		);
+		codeSenseManager = 945821CF0F5938F30049DE15 /* Code sense */;
+		executables = (
+			945821DD0F5939220049DE15 /* EyeTV */,
+		);
+		perUserDictionary = {
+			PBXConfiguration.PBXFileTableDataSource3.PBXExecutablesDataSource = {
+				PBXFileTableDataSourceColumnSortingDirectionKey = "-1";
+				PBXFileTableDataSourceColumnSortingKey = PBXExecutablesDataSource_NameID;
+				PBXFileTableDataSourceColumnWidthsKey = (
+					22,
+					300,
+					896,
+				);
+				PBXFileTableDataSourceColumnsKey = (
+					PBXExecutablesDataSource_ActiveFlagID,
+					PBXExecutablesDataSource_NameID,
+					PBXExecutablesDataSource_CommentsID,
+				);
+			};
+			PBXConfiguration.PBXFileTableDataSource3.PBXFileTableDataSource = {
+				PBXFileTableDataSourceColumnSortingDirectionKey = 1;
+				PBXFileTableDataSourceColumnSortingKey = PBXFileDataSource_Filename_ColumnID;
+				PBXFileTableDataSourceColumnWidthsKey = (
+					20,
+					1008,
+					20,
+					48,
+					43,
+					43,
+					20,
+				);
+				PBXFileTableDataSourceColumnsKey = (
+					PBXFileDataSource_FiletypeID,
+					PBXFileDataSource_Filename_ColumnID,
+					PBXFileDataSource_Built_ColumnID,
+					PBXFileDataSource_ObjectSize_ColumnID,
+					PBXFileDataSource_Errors_ColumnID,
+					PBXFileDataSource_Warnings_ColumnID,
+					PBXFileDataSource_Target_ColumnID,
+				);
+			};
+			PBXConfiguration.PBXFileTableDataSource3.PBXFindDataSource = {
+				PBXFileTableDataSourceColumnSortingDirectionKey = "-1";
+				PBXFileTableDataSourceColumnSortingKey = PBXFindDataSource_LocationID;
+				PBXFileTableDataSourceColumnWidthsKey = (
+					200,
+					1022,
+				);
+				PBXFileTableDataSourceColumnsKey = (
+					PBXFindDataSource_MessageID,
+					PBXFindDataSource_LocationID,
+				);
+			};
+			PBXConfiguration.PBXFileTableDataSource3.PBXSymbolsDataSource = {
+				PBXFileTableDataSourceColumnSortingDirectionKey = "-1";
+				PBXFileTableDataSourceColumnSortingKey = PBXSymbolsDataSource_SymbolNameID;
+				PBXFileTableDataSourceColumnWidthsKey = (
+					16,
+					200,
+					50,
+					948,
+				);
+				PBXFileTableDataSourceColumnsKey = (
+					PBXSymbolsDataSource_SymbolTypeIconID,
+					PBXSymbolsDataSource_SymbolNameID,
+					PBXSymbolsDataSource_SymbolTypeID,
+					PBXSymbolsDataSource_ReferenceNameID,
+				);
+			};
+			PBXConfiguration.PBXTargetDataSource.PBXTargetDataSource = {
+				PBXFileTableDataSourceColumnSortingDirectionKey = "-1";
+				PBXFileTableDataSourceColumnSortingKey = PBXFileDataSource_Filename_ColumnID;
+				PBXFileTableDataSourceColumnWidthsKey = (
+					20,
+					968,
+					60,
+					20,
+					48,
+					43,
+					43,
+				);
+				PBXFileTableDataSourceColumnsKey = (
+					PBXFileDataSource_FiletypeID,
+					PBXFileDataSource_Filename_ColumnID,
+					PBXTargetDataSource_PrimaryAttribute,
+					PBXFileDataSource_Built_ColumnID,
+					PBXFileDataSource_ObjectSize_ColumnID,
+					PBXFileDataSource_Errors_ColumnID,
+					PBXFileDataSource_Warnings_ColumnID,
+				);
+			};
+			PBXPerProjectTemplateStateSaveDate = 321181558;
+			PBXWorkspaceStateSaveDate = 321181558;
+		};
+		perUserProjectItems = {
+			945822CB0F5948A80049DE15 = 945822CB0F5948A80049DE15 /* PBXTextBookmark */;
+			94F17A3E1324D0F30045534A = 94F17A3E1324D0F30045534A /* PBXTextBookmark */;
+			94F17A9F1324D7590045534A = 94F17A9F1324D7590045534A /* PBXTextBookmark */;
+			94F17AA01324D7590045534A = 94F17AA01324D7590045534A /* PBXTextBookmark */;
+			94F17AA11324D7590045534A = 94F17AA11324D7590045534A /* PBXTextBookmark */;
+			94F17AA21324D7590045534A = 94F17AA21324D7590045534A /* PBXTextBookmark */;
+			94F17AA31324D7590045534A = 94F17AA31324D7590045534A /* PBXTextBookmark */;
+			94F17AA41324D7590045534A = 94F17AA41324D7590045534A /* PBXTextBookmark */;
+			94F17AA51324D7590045534A = 94F17AA51324D7590045534A /* PBXTextBookmark */;
+			94F17AA61324D7590045534A = 94F17AA61324D7590045534A /* PBXTextBookmark */;
+			94F17AAE1324D7790045534A /* PBXTextBookmark */ = 94F17AAE1324D7790045534A /* PBXTextBookmark */;
+		};
+		sourceControlManager = 945821CE0F5938F30049DE15 /* Source Control */;
+		userBuildSettings = {
+		};
+	};
+	4146BCD005F6554C00AB7993 /* EyeTVPluginDefs.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1186, 2704}}";
+			sepNavSelRange = "{218, 0}";
+			sepNavVisRange = "{0, 1689}";
+		};
+	};
+	4CF16BAE05D7ED3D00736E9B /* EyeTVEPGParser.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1186, 5785}}";
+			sepNavSelRange = "{13510, 2}";
+			sepNavVisRange = "{12018, 1325}";
+		};
+	};
+	8D57630D048677EA00EA77CD /* PlexTVServer */ = {
+		activeExec = 0;
+	};
+	945821CE0F5938F30049DE15 /* Source Control */ = {
+		isa = PBXSourceControlManager;
+		fallbackIsa = XCSourceControlManager;
+		isSCMEnabled = 0;
+		scmConfiguration = {
+			repositoryNamesForRoots = {
+				"" = "";
+			};
+		};
+	};
+	945821CF0F5938F30049DE15 /* Code sense */ = {
+		isa = PBXCodeSenseManager;
+		indexTemplatePath = "";
+	};
+	945821DD0F5939220049DE15 /* EyeTV */ = {
+		isa = PBXExecutable;
+		activeArgIndices = (
+		);
+		argumentStrings = (
+		);
+		autoAttachOnCrash = 1;
+		breakpointsEnabled = 1;
+		configStateDict = {
+			"PBXLSLaunchAction-0" = {
+				PBXLSLaunchAction = 0;
+				PBXLSLaunchStartAction = 1;
+				PBXLSLaunchStdioStyle = 2;
+				PBXLSLaunchStyle = 0;
+				class = PBXLSRunLaunchConfig;
+				commandLineArgs = (
+				);
+				displayName = "Executable Runner";
+				environment = {
+				};
+				identifier = com.apple.Xcode.launch.runConfig;
+				remoteHostInfo = "";
+				startActionInfo = "";
+			};
+		};
+		customDataFormattersEnabled = 1;
+		dataTipCustomDataFormattersEnabled = 1;
+		dataTipShowTypeColumn = 1;
+		dataTipSortType = 0;
+		debuggerPlugin = GDBDebugging;
+		disassemblyDisplayState = 0;
+		dylibVariantSuffix = "";
+		enableDebugStr = 1;
+		environmentEntries = (
+		);
+		executableSystemSymbolLevel = 0;
+		executableUserSymbolLevel = 0;
+		launchableReference = 945821DE0F5939220049DE15 /* EyeTV.app */;
+		libgmallocEnabled = 0;
+		name = EyeTV;
+		savedGlobals = {
+		};
+		showTypeColumn = 0;
+		sourceDirectories = (
+		);
+		variableFormatDictionary = {
+		};
+	};
+	945821DE0F5939220049DE15 /* EyeTV.app */ = {
+		isa = PBXFileReference;
+		lastKnownFileType = wrapper.application;
+		name = EyeTV.app;
+		path = /Applications/EyeTV.app;
+		sourceTree = "<absolute>";
+	};
+	945822CA0F5948990049DE15 /* CFNotificationCenter.h */ = {
+		isa = PBXFileReference;
+		lastKnownFileType = sourcecode.c.h;
+		name = CFNotificationCenter.h;
+		path = /System/Library/Frameworks/CoreFoundation.framework/Versions/A/Headers/CFNotificationCenter.h;
+		sourceTree = "<absolute>";
+	};
+	945822CB0F5948A80049DE15 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 945822CA0F5948990049DE15 /* CFNotificationCenter.h */;
+		name = "CFNotificationCenter.h: 33";
+		rLen = 82;
+		rLoc = 1638;
+		rType = 0;
+		vrLen = 1368;
+		vrLoc = 269;
+	};
+	94F17A3E1324D0F30045534A /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 4CF16BAE05D7ED3D00736E9B /* EyeTVEPGParser.m */;
+		name = "EyeTVEPGParser.m: 420";
+		rLen = 2;
+		rLoc = 13510;
+		rType = 0;
+		vrLen = 1325;
+		vrLoc = 12018;
+	};
+	94F17A421324D0F30045534A /* findmheg.c */ = {
+		isa = PBXFileReference;
+		lastKnownFileType = sourcecode.c.c;
+		name = findmheg.c;
+		path = "/Volumes/HomeOld/HomeLinks/Downloads/redbutton-download-20090727/findmheg.c";
+		sourceTree = "<absolute>";
+	};
+	94F17A5F1324D7350045534A /* assoc.c */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1186, 1092}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 1158}";
+		};
+	};
+	94F17A601324D7350045534A /* assoc.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1186, 598}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 1232}";
+		};
+	};
+	94F17A611324D7350045534A /* biop.c */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1186, 5278}}";
+			sepNavSelRange = "{5334, 0}";
+			sepNavVisRange = "{4775, 1110}";
+		};
+	};
+	94F17A621324D7350045534A /* biop.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1186, 1560}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 1260}";
+		};
+	};
+	94F17A671324D7350045534A /* channels.c */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1186, 8333}}";
+			sepNavSelRange = "{1006, 0}";
+			sepNavVisRange = "{320, 1466}";
+		};
+	};
+	94F17A9F1324D7590045534A /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 94F17A421324D0F30045534A /* findmheg.c */;
+		name = "findmheg.c: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 1369;
+		vrLoc = 0;
+	};
+	94F17AA01324D7590045534A /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 4146BCD005F6554C00AB7993 /* EyeTVPluginDefs.h */;
+		name = "EyeTVPluginDefs.h: 10";
+		rLen = 0;
+		rLoc = 218;
+		rType = 0;
+		vrLen = 1689;
+		vrLoc = 0;
+	};
+	94F17AA11324D7590045534A /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 94F17A5F1324D7350045534A /* assoc.c */;
+		name = "assoc.c: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 1158;
+		vrLoc = 0;
+	};
+	94F17AA21324D7590045534A /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 94F17A601324D7350045534A /* assoc.h */;
+		name = "assoc.h: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 1232;
+		vrLoc = 0;
+	};
+	94F17AA31324D7590045534A /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 94F17A611324D7350045534A /* biop.c */;
+		name = "biop.c: 164";
+		rLen = 0;
+		rLoc = 5334;
+		rType = 0;
+		vrLen = 1110;
+		vrLoc = 4775;
+	};
+	94F17AA41324D7590045534A /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 94F17A621324D7350045534A /* biop.h */;
+		name = "biop.h: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 1260;
+		vrLoc = 0;
+	};
+	94F17AA51324D7590045534A /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		comments = "Linux/dvb/frontend.h: No such file or directory";
+		fRef = 94F17A671324D7350045534A /* channels.c */;
+		rLen = 1;
+		rLoc = 33;
+		rType = 1;
+	};
+	94F17AA61324D7590045534A /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 94F17A671324D7350045534A /* channels.c */;
+		name = "channels.c: 34";
+		rLen = 0;
+		rLoc = 1006;
+		rType = 0;
+		vrLen = 1482;
+		vrLoc = 320;
+	};
+	94F17AAE1324D7790045534A /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 94F17A671324D7350045534A /* channels.c */;
+		name = "channels.c: 34";
+		rLen = 0;
+		rLoc = 1006;
+		rType = 0;
+		vrLen = 1466;
+		vrLoc = 320;
+	};
+}
