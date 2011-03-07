@@ -269,6 +269,12 @@
 		};
 	};
 	94F17A671324D7350045534A /* channels.c */ = {
+		isa = PBXFileReference;
+		fileEncoding = 4;
+		lastKnownFileType = sourcecode.c.c;
+		name = channels.c;
+		path = /Volumes/Home/ryan/Develop/EyeTVEPGParser/channels.c;
+		sourceTree = "<absolute>";
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {1186, 8333}}";
 			sepNavSelRange = "{1006, 0}";

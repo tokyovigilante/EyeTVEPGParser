@@ -19,8 +19,6 @@
 		94F17A831324D7350045534A /* cache.h in Headers */ = {isa = PBXBuildFile; fileRef = 94F17A641324D7350045534A /* cache.h */; };
 		94F17A841324D7350045534A /* carousel.c in Sources */ = {isa = PBXBuildFile; fileRef = 94F17A651324D7350045534A /* carousel.c */; };
 		94F17A851324D7350045534A /* carousel.h in Headers */ = {isa = PBXBuildFile; fileRef = 94F17A661324D7350045534A /* carousel.h */; };
-		94F17A861324D7350045534A /* channels.c in Sources */ = {isa = PBXBuildFile; fileRef = 94F17A671324D7350045534A /* channels.c */; };
-		94F17A871324D7350045534A /* channels.h in Headers */ = {isa = PBXBuildFile; fileRef = 94F17A681324D7350045534A /* channels.h */; };
 		94F17A881324D7350045534A /* command.c in Sources */ = {isa = PBXBuildFile; fileRef = 94F17A691324D7350045534A /* command.c */; };
 		94F17A891324D7350045534A /* command.h in Headers */ = {isa = PBXBuildFile; fileRef = 94F17A6A1324D7350045534A /* command.h */; };
 		94F17A8A1324D7350045534A /* dsmcc.c in Sources */ = {isa = PBXBuildFile; fileRef = 94F17A6B1324D7350045534A /* dsmcc.c */; };
@@ -59,8 +57,6 @@
 		94F17A641324D7350045534A /* cache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cache.h; sourceTree = "<group>"; };
 		94F17A651324D7350045534A /* carousel.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = carousel.c; sourceTree = "<group>"; };
 		94F17A661324D7350045534A /* carousel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = carousel.h; sourceTree = "<group>"; };
-		94F17A671324D7350045534A /* channels.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = channels.c; sourceTree = "<group>"; };
-		94F17A681324D7350045534A /* channels.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = channels.h; sourceTree = "<group>"; };
 		94F17A691324D7350045534A /* command.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = command.c; sourceTree = "<group>"; };
 		94F17A6A1324D7350045534A /* command.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = command.h; sourceTree = "<group>"; };
 		94F17A6B1324D7350045534A /* dsmcc.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = dsmcc.c; sourceTree = "<group>"; };
@@ -153,8 +149,6 @@
 				94F17A641324D7350045534A /* cache.h */,
 				94F17A651324D7350045534A /* carousel.c */,
 				94F17A661324D7350045534A /* carousel.h */,
-				94F17A671324D7350045534A /* channels.c */,
-				94F17A681324D7350045534A /* channels.h */,
 				94F17A691324D7350045534A /* command.c */,
 				94F17A6A1324D7350045534A /* command.h */,
 				94F17A6B1324D7350045534A /* dsmcc.c */,
@@ -192,7 +186,6 @@
 				94F17A811324D7350045534A /* biop.h in Headers */,
 				94F17A831324D7350045534A /* cache.h in Headers */,
 				94F17A851324D7350045534A /* carousel.h in Headers */,
-				94F17A871324D7350045534A /* channels.h in Headers */,
 				94F17A891324D7350045534A /* command.h in Headers */,
 				94F17A8B1324D7350045534A /* dsmcc.h in Headers */,
 				94F17A8D1324D7350045534A /* findmheg.h in Headers */,
@@ -284,7 +277,6 @@
 				94F17A801324D7350045534A /* biop.c in Sources */,
 				94F17A821324D7350045534A /* cache.c in Sources */,
 				94F17A841324D7350045534A /* carousel.c in Sources */,
-				94F17A861324D7350045534A /* channels.c in Sources */,
 				94F17A881324D7350045534A /* command.c in Sources */,
 				94F17A8A1324D7350045534A /* dsmcc.c in Sources */,
 				94F17A8C1324D7350045534A /* findmheg.c in Sources */,
