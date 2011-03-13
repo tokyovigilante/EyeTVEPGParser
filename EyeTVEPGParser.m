@@ -2,8 +2,7 @@
 #include "EyeTVPluginDefs.h"
 
 #import <Cocoa/Cocoa.h>
-#include <sys/socket.h>
-#import <sys/un.h>
+#import "TTMPEGExporter.h"
 
 #define MAX_PIDS			256
 #define MAX_ACTIVE_PIDS		256
@@ -17,25 +16,6 @@
 #define TVDBG
 //#define TVDBG_VERBOSE
 
-/**************************************************************************************
-*
-*	Structure for TS-Packets
-*
-**************************************************************************************/
-typedef struct {
-	unsigned long			sync_byte : 8,
-							transport_error_indicator : 1,
-							payload_unit_start_indicator : 1,
-							transport_priority : 1,
-							PID : 13,
-							transport_scrambling_control : 2,
-							adaptation_field_control : 2,
-							continuity_counter : 4;
-					
-	unsigned char			data[188-4];
-					
-} TransportStreamPacket;
-	
 
 /**************************************************************************************
 *
@@ -76,6 +56,7 @@ typedef struct {
     EyeTVPluginDeviceID				activeDeviceID;
 	long							activePIDsCount; 
     EyeTVPluginPIDInfo				activePIDs[MAX_ACTIVE_PIDS];
+
 } EyeTVEPGParserGlobals;
 
 
@@ -101,9 +82,10 @@ static long EyeTVEPGParserInitialize(EyeTVEPGParserGlobals** globals, long apiVe
 	
     long result = 0;
     
-    *globals = (EyeTVEPGParserGlobals*) calloc(1,sizeof(EyeTVEPGParserGlobals));
+    *globals = (EyeTVEPGParserGlobals *)calloc(1,sizeof(EyeTVEPGParserGlobals));
     ( *globals )->callback = callback;
-	
+	//*globals->exporter = (TTMPEGExporter *)[TTMPEGExporter sharedTTMPEGExporter];
+		
     return result;
 }
 
@@ -252,107 +234,70 @@ static long EyeTVEPGParserDeviceRemoved(EyeTVEPGParserGlobals *globals, EyeTVPlu
 ******************************************************************************************/
 static long EyeTVEPGParserPacketsArrived(EyeTVEPGParserGlobals *globals, EyeTVPluginDeviceID deviceID, long **packets, long packetsCount)
 {
-#if 0
-
-	if( globals ) 
+	
+	if(globals && deviceID == globals->activeDeviceID) 
     {
-        /* check if data connection is active */
-        if( i_plexSock != -1 )
-        {
-            if(deviceID == globals->activeDeviceID) 
-            {
-                long pidCount = globals->activePIDsCount;
-                if( pidCount )
-                {
-                    uint8_t packetBuffer[sizeof(TransportStreamPacket)*20];
-                    int32_t packetBufferSize = 0;
-                    while( packetsCount )
-                    {
-                        /* apply PID filtering, only PIDs in active service for device are sent through */
-                        long pid = ntohl(**packets)>>8 & 0x1FFFL;
-                        /* ignore NULL packets */
-                        if( 0x1FFFL != pid )
-                        {
-                            long i;
-                            for( i=0; i<pidCount; ++i )
-                            {
-                                if( globals->activePIDs[i].pid == pid )
-                                {
-                                    if(packetBufferSize <= (sizeof(packetBuffer)-sizeof(TransportStreamPacket)) )
-                                    {
-                                        /* copy packet in our buffer */
-                                        memcpy(packetBuffer+packetBufferSize, *packets, sizeof(TransportStreamPacket));
-                                        packetBufferSize += sizeof(TransportStreamPacket);
-                                    }
-                                    else
-                                    {
-                                        /* flush buffer to Plex */
-                                        int32_t sent = write(i_plexSock, packetBuffer, packetBufferSize);
-                                        if( sent != packetBufferSize )
-                                        {
-                                            if( sent == -1 )
-                                                printf("data sending failed (errno=%d)\n", errno);
-                                            else
-                                                printf("data sending incomplete (sent=%d)\n", sent);
-                                            close(i_plexSock);
-                                            i_plexSock = -1;
-                                            return 0;
-                                        }
-                                        packetBufferSize = 0;
-                                    }
-                                    if( i > 0 )
-                                    {
-										/* if we assume that consecutive packets would have the same PID in most cases,
-										 it would therefore speed up filtering to reorder activePIDs list based on pid
-										 occurrences */
-                                        EyeTVPluginPIDInfo swap = globals->activePIDs[i];
-                                        do
-                                        {
-                                            register int c = i--;
-                                            globals->activePIDs[c] = globals->activePIDs[i];
-                                        }
-                                        while( i );
-                                        globals->activePIDs[i] = swap;
-                                    }
-									
-                                    if( pid && globals->activePIDs[0].pidType != kEyeTVPIDType_PMT )
-                                    {
-                                        /* to save on CPU, prevent EyeTV from mirroring that program by blocking video & audio packets
-										 by changing all packets but PAT and PMT to NULL PID */
+       	long pidCount = globals->activePIDsCount;
+		if(pidCount)
+		{
+			while(packetsCount)
+			{
+				/* apply PID filtering, only PIDs in active service for device are sent through */
+				long pid = ntohl(**packets)>>8 & 0x1FFFL;
+				/* ignore NULL packets */
+				if( 0x1FFFL != pid )
+				{
+					for (SInt32 i=0; i<pidCount; ++i)
+					{
+						if( globals->activePIDs[i].pid == pid )
+						{
+							{
+								/* copy packet in our buffer */
+								UInt32 packetAdded = [[TTMPEGExporter sharedTTMPEGExporter] writePacket:*packets];
+								if (packetAdded < 0)
+								{
+									return 0;
+								}
+							}
+							if( i > 0 )
+							{
+								/* if we assume that consecutive packets would have the same PID in most cases,
+								 it would therefore speed up filtering to reorder activePIDs list based on pid
+								 occurrences */
+								EyeTVPluginPIDInfo swap = globals->activePIDs[i];
+								do
+								{
+									register int c = i--;
+									globals->activePIDs[c] = globals->activePIDs[i];
+								}
+								while( i );
+								globals->activePIDs[i] = swap;
+							}
+							// disabled - don't block EyeTV from parsing packets - will interrupt stream
+#if 0
+							if( pid && globals->activePIDs[0].pidType != kEyeTVPIDType_PMT )
+							{
+								/* to save on CPU, prevent EyeTV from mirroring that program by blocking video & audio packets
+								 by changing all packets but PAT and PMT to NULL PID */
 #if defined(WORDS_BIGENDIAN)
-                                        **packets |= 0x001FFF00L;
+								**packets |= 0x001FFF00L;
 #else
-                                        **packets |= 0x00FFF800L;
+								**packets |= 0x00FFF800L;
 #endif
-                                    }
-                                    /* done filtering on this packet, move on to next packet */
-                                    break;
-                                }
-                            }
-                        }
-                        --packetsCount;
-                        ++packets;
-                    }
-                    if( packetBufferSize )
-                    {
-                        /* flush buffer to Plex */
-                        int32_t sent = write(i_plexSock, packetBuffer, packetBufferSize);
-                        if( sent != packetBufferSize )
-                        {
-                            if( sent == -1 )
-                                printf("data sending failed (errno=%d)\n", errno);
-                            else
-                                printf("data sending incomplete (sent=%d)\n", sent);
-                            close(i_plexSock);
-                            i_plexSock = -1;
-                            return 0;
-                        }
-                    }
-                }
-            }
+							}
+#endif
+							/* done filtering on this packet, move on to next packet */
+							++packets;
+							break;
+						}
+					}
+				}
+				
+			}
+			
+            
         }
     }
-#endif
     return 0;
 }
 
@@ -390,6 +335,12 @@ static long EyeTVEPGParserServiceChanged(EyeTVEPGParserGlobals *globals,
 	fprintf(stderr, "EyeTVEPGParser: ServiceChanged\n");
 #endif
 	
+	if ([[TTMPEGExporter sharedTTMPEGExporter] hasValidTSStream])
+	{
+		NSLog(@"Closing active stream");
+		[[TTMPEGExporter sharedTTMPEGExporter] closeTSStream];
+	}
+	
 	if (globals) 
 	{
 		// if DeviceID has changed update globals - i think this is an API bug
@@ -414,8 +365,7 @@ static long EyeTVEPGParserServiceChanged(EyeTVEPGParserGlobals *globals,
 		{
 			globals->activePIDs[i] = pidList[i];
 			printf("Active PID: %ld, type: %ld\n", pidList[i].pid, pidList[i].pidType);
-		}
-	
+		}	
 	}
 	
 	return result;
