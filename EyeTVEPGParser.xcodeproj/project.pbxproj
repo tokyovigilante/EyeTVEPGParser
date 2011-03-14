@@ -10,24 +10,77 @@
 		4146BCD105F6554C00AB7993 /* EyeTVPluginDefs.h in Headers */ = {isa = PBXBuildFile; fileRef = 4146BCD005F6554C00AB7993 /* EyeTVPluginDefs.h */; };
 		4CF16BB005D7ED3E00736E9B /* EyeTVEPGParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CF16BAE05D7ED3D00736E9B /* EyeTVEPGParser.m */; };
 		8D5B49A804867FD3000E48DA /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8D5B49A704867FD3000E48DA /* InfoPlist.strings */; };
+		9424FDCF132EE0B00062941E /* DirectShowLib-2005.dll in Resources */ = {isa = PBXBuildFile; fileRef = 9424FDCB132EE0980062941E /* DirectShowLib-2005.dll */; };
 		945FF73B132746BE008B1F58 /* TTMPEGExporter.h in Headers */ = {isa = PBXBuildFile; fileRef = 945FF739132746BE008B1F58 /* TTMPEGExporter.h */; };
 		945FF73C132746BE008B1F58 /* TTMPEGExporter.m in Sources */ = {isa = PBXBuildFile; fileRef = 945FF73A132746BE008B1F58 /* TTMPEGExporter.m */; };
 		945FF73E132746E5008B1F58 /* SynthesizeSingleton.h in Headers */ = {isa = PBXBuildFile; fileRef = 945FF73D132746E5008B1F58 /* SynthesizeSingleton.h */; };
 		945FF777132747E4008B1F58 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 945FF776132747E4008B1F58 /* Cocoa.framework */; };
-		94B0057D132CCB03001E4FB2 /* stream.c in Sources */ = {isa = PBXBuildFile; fileRef = 94B0057C132CCB03001E4FB2 /* stream.c */; };
+		94B0072F132D6944001E4FB2 /* streamtest.m in Sources */ = {isa = PBXBuildFile; fileRef = 94B0072E132D6944001E4FB2 /* streamtest.m */; };
+		94B00735132D6969001E4FB2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94B00734132D6969001E4FB2 /* Foundation.framework */; };
+		94B00749132D699D001E4FB2 /* TTTransportStreamParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 94B00747132D699D001E4FB2 /* TTTransportStreamParser.m */; };
+		94B0080E132D6FEE001E4FB2 /* TTTransportStreamParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 94B00747132D699D001E4FB2 /* TTTransportStreamParser.m */; };
+		94B008A0132DACF8001E4FB2 /* Countries.cfg in Resources */ = {isa = PBXBuildFile; fileRef = 94B00878132DAC1E001E4FB2 /* Countries.cfg */; };
+		94B008A1132DACF8001E4FB2 /* Huffman Dictionary ATSC PSIP T1.cfg in Resources */ = {isa = PBXBuildFile; fileRef = 94B00879132DAC1E001E4FB2 /* Huffman Dictionary ATSC PSIP T1.cfg */; };
+		94B008A2132DACF8001E4FB2 /* Huffman Dictionary ATSC PSIP T2.cfg in Resources */ = {isa = PBXBuildFile; fileRef = 94B0087A132DAC1E001E4FB2 /* Huffman Dictionary ATSC PSIP T2.cfg */; };
+		94B008A3132DACF8001E4FB2 /* Huffman Dictionary AUS.cfg in Resources */ = {isa = PBXBuildFile; fileRef = 94B0087B132DAC1E001E4FB2 /* Huffman Dictionary AUS.cfg */; };
+		94B008A4132DACF8001E4FB2 /* Huffman Dictionary Freesat T1.cfg in Resources */ = {isa = PBXBuildFile; fileRef = 94B0087C132DAC1E001E4FB2 /* Huffman Dictionary Freesat T1.cfg */; };
+		94B008A5132DACF8001E4FB2 /* Huffman Dictionary Freesat T2.cfg in Resources */ = {isa = PBXBuildFile; fileRef = 94B0087D132DAC1E001E4FB2 /* Huffman Dictionary Freesat T2.cfg */; };
+		94B008A6132DACF8001E4FB2 /* Huffman Dictionary GBR.cfg in Resources */ = {isa = PBXBuildFile; fileRef = 94B0087E132DAC1E001E4FB2 /* Huffman Dictionary GBR.cfg */; };
+		94B008A7132DACF8001E4FB2 /* Huffman Dictionary ITA.cfg in Resources */ = {isa = PBXBuildFile; fileRef = 94B0087F132DAC1E001E4FB2 /* Huffman Dictionary ITA.cfg */; };
+		94B008A8132DACF8001E4FB2 /* Huffman Dictionary NZL.cfg in Resources */ = {isa = PBXBuildFile; fileRef = 94B00880132DAC1E001E4FB2 /* Huffman Dictionary NZL.cfg */; };
+		94B008A9132DACF8001E4FB2 /* Language Codes.cfg in Resources */ = {isa = PBXBuildFile; fileRef = 94B00881132DAC1E001E4FB2 /* Language Codes.cfg */; };
+		94B008AA132DACF8001E4FB2 /* MHEG5 Parser Format AUS.cfg in Resources */ = {isa = PBXBuildFile; fileRef = 94B00882132DAC1E001E4FB2 /* MHEG5 Parser Format AUS.cfg */; };
+		94B008AB132DACF8001E4FB2 /* MHEG5 Parser Format NZL.cfg in Resources */ = {isa = PBXBuildFile; fileRef = 94B00883132DAC1E001E4FB2 /* MHEG5 Parser Format NZL.cfg */; };
+		94B008B6132DACF8001E4FB2 /* EIT Categories.cfg in Resources */ = {isa = PBXBuildFile; fileRef = 94B0088F132DAC1E001E4FB2 /* EIT Categories.cfg */; };
+		94B008B7132DACF8001E4FB2 /* OpenTV Categories AUS.cfg in Resources */ = {isa = PBXBuildFile; fileRef = 94B00890132DAC1E001E4FB2 /* OpenTV Categories AUS.cfg */; };
+		94B008B8132DACF8001E4FB2 /* OpenTV Categories GBR.cfg in Resources */ = {isa = PBXBuildFile; fileRef = 94B00891132DAC1E001E4FB2 /* OpenTV Categories GBR.cfg */; };
+		94B008B9132DACF8001E4FB2 /* OpenTV Categories ITA.cfg in Resources */ = {isa = PBXBuildFile; fileRef = 94B00892132DAC1E001E4FB2 /* OpenTV Categories ITA.cfg */; };
+		94B008BA132DACF8001E4FB2 /* OpenTV Categories NZL.cfg in Resources */ = {isa = PBXBuildFile; fileRef = 94B00893132DAC1E001E4FB2 /* OpenTV Categories NZL.cfg */; };
+		94B008BB132DACF8001E4FB2 /* DirectShow.dll in Resources */ = {isa = PBXBuildFile; fileRef = 94B00894132DAC1E001E4FB2 /* DirectShow.dll */; };
+		94B008BD132DACF8001E4FB2 /* DomainObjects.dll in Resources */ = {isa = PBXBuildFile; fileRef = 94B00896132DAC1E001E4FB2 /* DomainObjects.dll */; };
+		94B008BE132DACF8001E4FB2 /* DVBServices.dll in Resources */ = {isa = PBXBuildFile; fileRef = 94B00897132DAC1E001E4FB2 /* DVBServices.dll */; };
+		94B008BF132DACF8001E4FB2 /* EPGCollector.exe in Resources */ = {isa = PBXBuildFile; fileRef = 94B00898132DAC1E001E4FB2 /* EPGCollector.exe */; };
+		94B008C4132DACF8001E4FB2 /* zlib.net.dll in Resources */ = {isa = PBXBuildFile; fileRef = 94B0089D132DAC1E001E4FB2 /* zlib.net.dll */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		089C167EFE841241C02AAC07 /* English */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		4146BCD005F6554C00AB7993 /* EyeTVPluginDefs.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = EyeTVPluginDefs.h; sourceTree = "<group>"; };
 		4CF16BAE05D7ED3D00736E9B /* EyeTVEPGParser.m */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; fileEncoding = 30; path = EyeTVEPGParser.m; sourceTree = "<group>"; };
-		8D576316048677EA00EA77CD /* EyeTVPluginSampleX.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EyeTVPluginSampleX.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		8D576316048677EA00EA77CD /* EyeTVEPGParser.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EyeTVEPGParser.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D576317048677EA00EA77CD /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		9424FDCB132EE0980062941E /* DirectShowLib-2005.dll */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DirectShowLib-2005.dll"; sourceTree = "<group>"; };
 		945FF739132746BE008B1F58 /* TTMPEGExporter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTMPEGExporter.h; sourceTree = "<group>"; };
 		945FF73A132746BE008B1F58 /* TTMPEGExporter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTMPEGExporter.m; sourceTree = "<group>"; };
 		945FF73D132746E5008B1F58 /* SynthesizeSingleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SynthesizeSingleton.h; sourceTree = "<group>"; };
 		945FF776132747E4008B1F58 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
-		94B0057C132CCB03001E4FB2 /* stream.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = stream.c; sourceTree = "<group>"; };
+		94B00727132D6926001E4FB2 /* streamtest */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = streamtest; sourceTree = BUILT_PRODUCTS_DIR; };
+		94B0072E132D6944001E4FB2 /* streamtest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = streamtest.m; sourceTree = "<group>"; };
+		94B00734132D6969001E4FB2 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
+		94B00747132D699D001E4FB2 /* TTTransportStreamParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTTransportStreamParser.m; sourceTree = "<group>"; };
+		94B00748132D699D001E4FB2 /* TTTransportStreamParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTTransportStreamParser.h; sourceTree = "<group>"; };
+		94B00878132DAC1E001E4FB2 /* Countries.cfg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Countries.cfg; sourceTree = "<group>"; };
+		94B00879132DAC1E001E4FB2 /* Huffman Dictionary ATSC PSIP T1.cfg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "Huffman Dictionary ATSC PSIP T1.cfg"; sourceTree = "<group>"; };
+		94B0087A132DAC1E001E4FB2 /* Huffman Dictionary ATSC PSIP T2.cfg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "Huffman Dictionary ATSC PSIP T2.cfg"; sourceTree = "<group>"; };
+		94B0087B132DAC1E001E4FB2 /* Huffman Dictionary AUS.cfg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "Huffman Dictionary AUS.cfg"; sourceTree = "<group>"; };
+		94B0087C132DAC1E001E4FB2 /* Huffman Dictionary Freesat T1.cfg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "Huffman Dictionary Freesat T1.cfg"; sourceTree = "<group>"; };
+		94B0087D132DAC1E001E4FB2 /* Huffman Dictionary Freesat T2.cfg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "Huffman Dictionary Freesat T2.cfg"; sourceTree = "<group>"; };
+		94B0087E132DAC1E001E4FB2 /* Huffman Dictionary GBR.cfg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "Huffman Dictionary GBR.cfg"; sourceTree = "<group>"; };
+		94B0087F132DAC1E001E4FB2 /* Huffman Dictionary ITA.cfg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "Huffman Dictionary ITA.cfg"; sourceTree = "<group>"; };
+		94B00880132DAC1E001E4FB2 /* Huffman Dictionary NZL.cfg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "Huffman Dictionary NZL.cfg"; sourceTree = "<group>"; };
+		94B00881132DAC1E001E4FB2 /* Language Codes.cfg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "Language Codes.cfg"; sourceTree = "<group>"; };
+		94B00882132DAC1E001E4FB2 /* MHEG5 Parser Format AUS.cfg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "MHEG5 Parser Format AUS.cfg"; sourceTree = "<group>"; };
+		94B00883132DAC1E001E4FB2 /* MHEG5 Parser Format NZL.cfg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "MHEG5 Parser Format NZL.cfg"; sourceTree = "<group>"; };
+		94B0088F132DAC1E001E4FB2 /* EIT Categories.cfg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "EIT Categories.cfg"; sourceTree = "<group>"; };
+		94B00890132DAC1E001E4FB2 /* OpenTV Categories AUS.cfg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "OpenTV Categories AUS.cfg"; sourceTree = "<group>"; };
+		94B00891132DAC1E001E4FB2 /* OpenTV Categories GBR.cfg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "OpenTV Categories GBR.cfg"; sourceTree = "<group>"; };
+		94B00892132DAC1E001E4FB2 /* OpenTV Categories ITA.cfg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "OpenTV Categories ITA.cfg"; sourceTree = "<group>"; };
+		94B00893132DAC1E001E4FB2 /* OpenTV Categories NZL.cfg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "OpenTV Categories NZL.cfg"; sourceTree = "<group>"; };
+		94B00894132DAC1E001E4FB2 /* DirectShow.dll */ = {isa = PBXFileReference; lastKnownFileType = file; path = DirectShow.dll; sourceTree = "<group>"; };
+		94B00896132DAC1E001E4FB2 /* DomainObjects.dll */ = {isa = PBXFileReference; lastKnownFileType = file; path = DomainObjects.dll; sourceTree = "<group>"; };
+		94B00897132DAC1E001E4FB2 /* DVBServices.dll */ = {isa = PBXFileReference; lastKnownFileType = file; path = DVBServices.dll; sourceTree = "<group>"; };
+		94B00898132DAC1E001E4FB2 /* EPGCollector.exe */ = {isa = PBXFileReference; lastKnownFileType = file; path = EPGCollector.exe; sourceTree = "<group>"; };
+		94B0089D132DAC1E001E4FB2 /* zlib.net.dll */ = {isa = PBXFileReference; lastKnownFileType = file; path = zlib.net.dll; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -36,6 +89,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				945FF777132747E4008B1F58 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		94B00725132D6926001E4FB2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				94B00735132D6969001E4FB2 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -49,6 +110,7 @@
 				089C167CFE841241C02AAC07 /* Resources */,
 				089C1671FE841209C02AAC07 /* External Frameworks and Libraries */,
 				19C28FB6FE9D52B211CA2CBB /* Products */,
+				94B00734132D6969001E4FB2 /* Foundation.framework */,
 			);
 			name = EyeTVPluginSampleX;
 			sourceTree = "<group>";
@@ -64,6 +126,7 @@
 		089C167CFE841241C02AAC07 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				94B00876132DAC1E001E4FB2 /* EPGCollector */,
 				8D576317048677EA00EA77CD /* Info.plist */,
 				8D5B49A704867FD3000E48DA /* InfoPlist.strings */,
 			);
@@ -73,11 +136,13 @@
 		08FB77AFFE84173DC02AAC07 /* Source */ = {
 			isa = PBXGroup;
 			children = (
-				94B0057C132CCB03001E4FB2 /* stream.c */,
+				94B0072C132D6937001E4FB2 /* StreamTest */,
+				94B00748132D699D001E4FB2 /* TTTransportStreamParser.h */,
+				94B00747132D699D001E4FB2 /* TTTransportStreamParser.m */,
 				4146BCD005F6554C00AB7993 /* EyeTVPluginDefs.h */,
-				4CF16BAE05D7ED3D00736E9B /* EyeTVEPGParser.m */,
 				945FF739132746BE008B1F58 /* TTMPEGExporter.h */,
 				945FF73A132746BE008B1F58 /* TTMPEGExporter.m */,
+				4CF16BAE05D7ED3D00736E9B /* EyeTVEPGParser.m */,
 				945FF73D132746E5008B1F58 /* SynthesizeSingleton.h */,
 			);
 			name = Source;
@@ -86,9 +151,64 @@
 		19C28FB6FE9D52B211CA2CBB /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				8D576316048677EA00EA77CD /* EyeTVPluginSampleX.bundle */,
+				8D576316048677EA00EA77CD /* EyeTVEPGParser.bundle */,
+				94B00727132D6926001E4FB2 /* streamtest */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		94B0072C132D6937001E4FB2 /* StreamTest */ = {
+			isa = PBXGroup;
+			children = (
+				94B0072E132D6944001E4FB2 /* streamtest.m */,
+			);
+			name = StreamTest;
+			sourceTree = "<group>";
+		};
+		94B00876132DAC1E001E4FB2 /* EPGCollector */ = {
+			isa = PBXGroup;
+			children = (
+				9424FDCB132EE0980062941E /* DirectShowLib-2005.dll */,
+				94B00877132DAC1E001E4FB2 /* Configuration */,
+				94B00894132DAC1E001E4FB2 /* DirectShow.dll */,
+				94B00896132DAC1E001E4FB2 /* DomainObjects.dll */,
+				94B00897132DAC1E001E4FB2 /* DVBServices.dll */,
+				94B00898132DAC1E001E4FB2 /* EPGCollector.exe */,
+				94B0089D132DAC1E001E4FB2 /* zlib.net.dll */,
+			);
+			path = EPGCollector;
+			sourceTree = "<group>";
+		};
+		94B00877132DAC1E001E4FB2 /* Configuration */ = {
+			isa = PBXGroup;
+			children = (
+				94B00878132DAC1E001E4FB2 /* Countries.cfg */,
+				94B00879132DAC1E001E4FB2 /* Huffman Dictionary ATSC PSIP T1.cfg */,
+				94B0087A132DAC1E001E4FB2 /* Huffman Dictionary ATSC PSIP T2.cfg */,
+				94B0087B132DAC1E001E4FB2 /* Huffman Dictionary AUS.cfg */,
+				94B0087C132DAC1E001E4FB2 /* Huffman Dictionary Freesat T1.cfg */,
+				94B0087D132DAC1E001E4FB2 /* Huffman Dictionary Freesat T2.cfg */,
+				94B0087E132DAC1E001E4FB2 /* Huffman Dictionary GBR.cfg */,
+				94B0087F132DAC1E001E4FB2 /* Huffman Dictionary ITA.cfg */,
+				94B00880132DAC1E001E4FB2 /* Huffman Dictionary NZL.cfg */,
+				94B00881132DAC1E001E4FB2 /* Language Codes.cfg */,
+				94B00882132DAC1E001E4FB2 /* MHEG5 Parser Format AUS.cfg */,
+				94B00883132DAC1E001E4FB2 /* MHEG5 Parser Format NZL.cfg */,
+				94B00884132DAC1E001E4FB2 /* Program Categories */,
+			);
+			path = Configuration;
+			sourceTree = "<group>";
+		};
+		94B00884132DAC1E001E4FB2 /* Program Categories */ = {
+			isa = PBXGroup;
+			children = (
+				94B0088F132DAC1E001E4FB2 /* EIT Categories.cfg */,
+				94B00890132DAC1E001E4FB2 /* OpenTV Categories AUS.cfg */,
+				94B00891132DAC1E001E4FB2 /* OpenTV Categories GBR.cfg */,
+				94B00892132DAC1E001E4FB2 /* OpenTV Categories ITA.cfg */,
+				94B00893132DAC1E001E4FB2 /* OpenTV Categories NZL.cfg */,
+			);
+			path = "Program Categories";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -124,8 +244,24 @@
 			name = EyeTVEPGParser;
 			productInstallPath = "$(HOME)/Library/Bundles";
 			productName = EyeTVPluginSampleX;
-			productReference = 8D576316048677EA00EA77CD /* EyeTVPluginSampleX.bundle */;
+			productReference = 8D576316048677EA00EA77CD /* EyeTVEPGParser.bundle */;
 			productType = "com.apple.product-type.bundle";
+		};
+		94B00726132D6926001E4FB2 /* streamtest */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 94B0072D132D6937001E4FB2 /* Build configuration list for PBXNativeTarget "streamtest" */;
+			buildPhases = (
+				94B00724132D6926001E4FB2 /* Sources */,
+				94B00725132D6926001E4FB2 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = streamtest;
+			productName = streamtest;
+			productReference = 94B00727132D6926001E4FB2 /* streamtest */;
+			productType = "com.apple.product-type.tool";
 		};
 /* End PBXNativeTarget section */
 
@@ -147,6 +283,7 @@
 			projectRoot = "";
 			targets = (
 				8D57630D048677EA00EA77CD /* EyeTVEPGParser */,
+				94B00726132D6926001E4FB2 /* streamtest */,
 			);
 		};
 /* End PBXProject section */
@@ -157,6 +294,29 @@
 			buildActionMask = 2147483647;
 			files = (
 				8D5B49A804867FD3000E48DA /* InfoPlist.strings in Resources */,
+				94B008A0132DACF8001E4FB2 /* Countries.cfg in Resources */,
+				94B008A1132DACF8001E4FB2 /* Huffman Dictionary ATSC PSIP T1.cfg in Resources */,
+				94B008A2132DACF8001E4FB2 /* Huffman Dictionary ATSC PSIP T2.cfg in Resources */,
+				94B008A3132DACF8001E4FB2 /* Huffman Dictionary AUS.cfg in Resources */,
+				94B008A4132DACF8001E4FB2 /* Huffman Dictionary Freesat T1.cfg in Resources */,
+				94B008A5132DACF8001E4FB2 /* Huffman Dictionary Freesat T2.cfg in Resources */,
+				94B008A6132DACF8001E4FB2 /* Huffman Dictionary GBR.cfg in Resources */,
+				94B008A7132DACF8001E4FB2 /* Huffman Dictionary ITA.cfg in Resources */,
+				94B008A8132DACF8001E4FB2 /* Huffman Dictionary NZL.cfg in Resources */,
+				94B008A9132DACF8001E4FB2 /* Language Codes.cfg in Resources */,
+				94B008AA132DACF8001E4FB2 /* MHEG5 Parser Format AUS.cfg in Resources */,
+				94B008AB132DACF8001E4FB2 /* MHEG5 Parser Format NZL.cfg in Resources */,
+				94B008B6132DACF8001E4FB2 /* EIT Categories.cfg in Resources */,
+				94B008B7132DACF8001E4FB2 /* OpenTV Categories AUS.cfg in Resources */,
+				94B008B8132DACF8001E4FB2 /* OpenTV Categories GBR.cfg in Resources */,
+				94B008B9132DACF8001E4FB2 /* OpenTV Categories ITA.cfg in Resources */,
+				94B008BA132DACF8001E4FB2 /* OpenTV Categories NZL.cfg in Resources */,
+				94B008BB132DACF8001E4FB2 /* DirectShow.dll in Resources */,
+				94B008BD132DACF8001E4FB2 /* DomainObjects.dll in Resources */,
+				94B008BE132DACF8001E4FB2 /* DVBServices.dll in Resources */,
+				94B008BF132DACF8001E4FB2 /* EPGCollector.exe in Resources */,
+				94B008C4132DACF8001E4FB2 /* zlib.net.dll in Resources */,
+				9424FDCF132EE0B00062941E /* DirectShowLib-2005.dll in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -179,7 +339,16 @@
 			files = (
 				4CF16BB005D7ED3E00736E9B /* EyeTVEPGParser.m in Sources */,
 				945FF73C132746BE008B1F58 /* TTMPEGExporter.m in Sources */,
-				94B0057D132CCB03001E4FB2 /* stream.c in Sources */,
+				94B0080E132D6FEE001E4FB2 /* TTTransportStreamParser.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		94B00724132D6926001E4FB2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				94B0072F132D6944001E4FB2 /* streamtest.m in Sources */,
+				94B00749132D699D001E4FB2 /* TTTransportStreamParser.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -200,7 +369,7 @@
 		940237E00E1CDAF600619E65 /* Development */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(NATIVE_ARCH_ACTUAL)";
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				HEADER_SEARCH_PATHS = "";
 				USER_HEADER_SEARCH_PATHS = "";
 			};
@@ -209,7 +378,7 @@
 		940237E10E1CDAF600619E65 /* Deployment */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 			};
 			name = Deployment;
 		};
@@ -233,12 +402,12 @@
 				GCC_WARN_FOUR_CHARACTER_CONSTANTS = NO;
 				GCC_WARN_UNKNOWN_PRAGMAS = NO;
 				INFOPLIST_FILE = Info.plist;
-				INSTALL_PATH = "$(HOME)/Library/Bundles";
+				INSTALL_PATH = "/Library/Application Support/EyeTV/Plugins";
 				LIBRARY_STYLE = Bundle;
 				OTHER_CFLAGS = "";
 				OTHER_LDFLAGS = "";
 				OTHER_REZFLAGS = "";
-				PRODUCT_NAME = PlexTVServer;
+				PRODUCT_NAME = EyeTVEPGParser;
 				SECTORDER_FLAGS = "";
 				WARNING_CFLAGS = (
 					"-Wmost",
@@ -260,12 +429,12 @@
 				GCC_WARN_FOUR_CHARACTER_CONSTANTS = NO;
 				GCC_WARN_UNKNOWN_PRAGMAS = NO;
 				INFOPLIST_FILE = Info.plist;
-				INSTALL_PATH = "$(HOME)/Library/Bundles";
+				INSTALL_PATH = "/Library/Application Support/EyeTV/Plugins";
 				LIBRARY_STYLE = Bundle;
 				OTHER_CFLAGS = "";
 				OTHER_LDFLAGS = "";
 				OTHER_REZFLAGS = "";
-				PRODUCT_NAME = EyeTVPluginSampleX;
+				PRODUCT_NAME = EyeTVEPGParser;
 				SECTORDER_FLAGS = "";
 				WARNING_CFLAGS = (
 					"-Wmost",
@@ -285,12 +454,12 @@
 				GCC_WARN_FOUR_CHARACTER_CONSTANTS = NO;
 				GCC_WARN_UNKNOWN_PRAGMAS = NO;
 				INFOPLIST_FILE = Info.plist;
-				INSTALL_PATH = "$(HOME)/Library/Bundles";
+				INSTALL_PATH = "/Library/Application Support/EyeTV/Plugins";
 				LIBRARY_STYLE = Bundle;
 				OTHER_CFLAGS = "";
 				OTHER_LDFLAGS = "";
 				OTHER_REZFLAGS = "";
-				PRODUCT_NAME = EyeTVPluginSampleX;
+				PRODUCT_NAME = EyeTVEPGParser;
 				SECTORDER_FLAGS = "";
 				WARNING_CFLAGS = (
 					"-Wmost",
@@ -298,6 +467,44 @@
 					"-Wno-unknown-pragmas",
 				);
 				WRAPPER_EXTENSION = bundle;
+			};
+			name = Default;
+		};
+		94B00729132D6926001E4FB2 /* Development */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				INSTALL_PATH = /usr/local/bin;
+				PREBINDING = NO;
+				PRODUCT_NAME = streamtest;
+			};
+			name = Development;
+		};
+		94B0072A132D6926001E4FB2 /* Deployment */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				INSTALL_PATH = /usr/local/bin;
+				PREBINDING = NO;
+				PRODUCT_NAME = streamtest;
+			};
+			name = Deployment;
+		};
+		94B0072B132D6926001E4FB2 /* Default */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_MODEL_TUNING = G5;
+				INSTALL_PATH = /usr/local/bin;
+				PREBINDING = NO;
+				PRODUCT_NAME = streamtest;
 			};
 			name = Default;
 		};
@@ -320,6 +527,16 @@
 				940237E30E1CDAF600619E65 /* Development */,
 				940237E40E1CDAF600619E65 /* Deployment */,
 				940237E50E1CDAF600619E65 /* Default */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Default;
+		};
+		94B0072D132D6937001E4FB2 /* Build configuration list for PBXNativeTarget "streamtest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				94B00729132D6926001E4FB2 /* Development */,
+				94B0072A132D6926001E4FB2 /* Deployment */,
+				94B0072B132D6926001E4FB2 /* Default */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Default;

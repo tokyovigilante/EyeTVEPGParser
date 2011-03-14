@@ -34,21 +34,24 @@ typedef struct {
 	
 	CFAbsoluteTime _firstPacketTime;
 	BOOL _wantPackets;
+	UInt64 _packetCount;
+	UInt16 _dsmccPID, _videoPID;
 	dispatch_queue_t _streamWriteQueue;
 	
 	NSTimer *_updateTimer;
 }
 
-+(TTMPEGExporter *)sharedTTMPEGExporter;
+// if >0, video PID for current stream
+-(UInt16)videoPID;
 
-// returns YES on successful stream creation
--(BOOL)createTSStream:(NSURL *)streamURL;
+// Updates EPG based on DSM-CC carousel for current channel
+-(void)updateEPG:(NSTimer *)timer;
 
 // returns YES if stream open for writing packets
 -(BOOL)hasValidTSStream;
 
 // returns YES if packet written successfully
--(BOOL)writePacket:(void *)packet;
+-(BOOL)writePackets:(void *)packets count:(UInt32)count;
 
 // returns true if stream closed without errors
 -(BOOL)closeTSStream;

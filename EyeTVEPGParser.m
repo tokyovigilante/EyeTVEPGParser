@@ -52,6 +52,8 @@ typedef struct {
 	EyeTVPluginCallbackProc			callback;
 	long							deviceCount;
 	DeviceInfo						devices[MAX_DEVICES];
+	TTMPEGExporter					*exporter;
+	NSAutoreleasePool				*pool;
 	/* Structure to hold current active service */
     EyeTVPluginDeviceID				activeDeviceID;
 	long							activePIDsCount; 
@@ -84,8 +86,8 @@ static long EyeTVEPGParserInitialize(EyeTVEPGParserGlobals** globals, long apiVe
     
     *globals = (EyeTVEPGParserGlobals *)calloc(1,sizeof(EyeTVEPGParserGlobals));
     ( *globals )->callback = callback;
-	//*globals->exporter = (TTMPEGExporter *)[TTMPEGExporter sharedTTMPEGExporter];
-		
+	(*globals)->pool = [[NSAutoreleasePool alloc] init];
+
     return result;
 }
 
@@ -106,7 +108,7 @@ static long EyeTVEPGParserTerminate(EyeTVEPGParserGlobals *globals)
 	fprintf(stderr, "EyeTVEPGParser: Terminate\n");
 #endif
 	long result = 0;
-        
+	[globals->pool drain];
     free( globals );
     return result;
 	
@@ -180,8 +182,6 @@ static long EyeTVEPGParserDeviceAdded(EyeTVEPGParserGlobals *globals, EyeTVPlugi
 #endif
     
     long result = 0;
-
-#warning enable parser
 	
     return result;
 	
@@ -207,7 +207,7 @@ static long EyeTVEPGParserDeviceRemoved(EyeTVEPGParserGlobals *globals, EyeTVPlu
 #endif
 	long result = 0;
 	
-#warning disable parser
+	[globals->exporter release];
 	
     return result;
 	
@@ -234,44 +234,48 @@ static long EyeTVEPGParserDeviceRemoved(EyeTVEPGParserGlobals *globals, EyeTVPlu
 ******************************************************************************************/
 static long EyeTVEPGParserPacketsArrived(EyeTVEPGParserGlobals *globals, EyeTVPluginDeviceID deviceID, long **packets, long packetsCount)
 {
+	NSAutoreleasePool *pool = [[NSAutoreleasePool alloc] init];
 	
 	if(globals && deviceID == globals->activeDeviceID) 
     {
-       	long pidCount = globals->activePIDsCount;
-		if(pidCount)
+       	//long pidCount = globals->activePIDsCount;
+		//if(pidCount)
+		//void *packetBuffer = malloc(sizeof(TransportStreamPacket) * packetsCount);
+		[globals->exporter writePackets:*packets count:packetsCount];
+		return 0;
 		{
+			//memcpy (packetBuffer, *packets, sizeof(TransportStreamPacket) * packetsCount));
 			while(packetsCount)
 			{
 				/* apply PID filtering, only PIDs in active service for device are sent through */
-				long pid = ntohl(**packets)>>8 & 0x1FFFL;
+				//long pid = ntohl(**packets)>>8 & 0x1FFFL;
 				/* ignore NULL packets */
-				if( 0x1FFFL != pid )
+				//if( 0x1FFFL != pid )
 				{
-					for (SInt32 i=0; i<pidCount; ++i)
+					//for (SInt32 i=0; i<pidCount; ++i)
 					{
-						if( globals->activePIDs[i].pid == pid )
+						//if( globals->activePIDs[i].pid == pid )
 						{
 							{
 								/* copy packet in our buffer */
-								UInt32 packetAdded = [[TTMPEGExporter sharedTTMPEGExporter] writePacket:*packets];
-								if (packetAdded < 0)
+								//if (packetAdded < 0)
 								{
-									return 0;
+								//	return 0;
 								}
 							}
-							if( i > 0 )
+							//if( i > 0 )
 							{
 								/* if we assume that consecutive packets would have the same PID in most cases,
 								 it would therefore speed up filtering to reorder activePIDs list based on pid
 								 occurrences */
-								EyeTVPluginPIDInfo swap = globals->activePIDs[i];
-								do
+								//EyeTVPluginPIDInfo swap = globals->activePIDs[i];
+								//do
 								{
-									register int c = i--;
-									globals->activePIDs[c] = globals->activePIDs[i];
+								//	register int c = i--;
+								//	globals->activePIDs[c] = globals->activePIDs[i];
 								}
-								while( i );
-								globals->activePIDs[i] = swap;
+								//while( i );
+								//globals->activePIDs[i] = swap;
 							}
 							// disabled - don't block EyeTV from parsing packets - will interrupt stream
 #if 0
@@ -280,15 +284,16 @@ static long EyeTVEPGParserPacketsArrived(EyeTVEPGParserGlobals *globals, EyeTVPl
 								/* to save on CPU, prevent EyeTV from mirroring that program by blocking video & audio packets
 								 by changing all packets but PAT and PMT to NULL PID */
 #if defined(WORDS_BIGENDIAN)
-								**packets |= 0x001FFF00L;
+							//	**packets |= 0x001FFF00L;
 #else
-								**packets |= 0x00FFF800L;
+							//	**packets |= 0x00FFF800L;
 #endif
 							}
 #endif
 							/* done filtering on this packet, move on to next packet */
 							++packets;
-							break;
+							packetsCount--;
+						//	break;
 						}
 					}
 				}
@@ -298,6 +303,7 @@ static long EyeTVEPGParserPacketsArrived(EyeTVEPGParserGlobals *globals, EyeTVPl
             
         }
     }
+	[pool release];
     return 0;
 }
 
@@ -335,10 +341,10 @@ static long EyeTVEPGParserServiceChanged(EyeTVEPGParserGlobals *globals,
 	fprintf(stderr, "EyeTVEPGParser: ServiceChanged\n");
 #endif
 	
-	if ([[TTMPEGExporter sharedTTMPEGExporter] hasValidTSStream])
+	if ([globals->exporter hasValidTSStream])
 	{
 		NSLog(@"Closing active stream");
-		[[TTMPEGExporter sharedTTMPEGExporter] closeTSStream];
+		[globals->exporter closeTSStream];
 	}
 	
 	if (globals) 
@@ -366,6 +372,12 @@ static long EyeTVEPGParserServiceChanged(EyeTVEPGParserGlobals *globals,
 			globals->activePIDs[i] = pidList[i];
 			printf("Active PID: %ld, type: %ld\n", pidList[i].pid, pidList[i].pidType);
 		}	
+		// rerun exporter for new channel
+		if (!globals->exporter)
+		{
+			globals->exporter = [[TTMPEGExporter alloc] init];
+		}
+		[globals->exporter updateEPG:nil];
 	}
 	
 	return result;
