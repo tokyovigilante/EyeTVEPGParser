@@ -168,7 +168,7 @@
 			@try 
 			{
 				[NSTask launchedTaskWithLaunchPath:@"/usr/bin/mono"
-										 arguments:[NSArray arrayWithObjects:@"/Library/Application Support/EyeTV/Plugins/EyeTVEPGParser.bundle/Contents/Resources/EPGCollector.exe",
+										 arguments:[NSArray arrayWithObjects:@"/Library/Application Support/EyeTV/Plugins/EyeTVEPGParser.bundle/Contents/Resources/EPGCollector/EPGCollector.exe",
 													[NSString stringWithFormat:@"/ini=%@", [iniURL path]], nil]];
 			}
 			@catch (NSException * e) 
