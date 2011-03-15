@@ -150,9 +150,9 @@
 			
 			// generate config for EPG Collector
 			NSURL *iniURL = [[self applicationSupportFolderURL] URLByAppendingPathComponent:@"EyeTVMHEG5.ini"];
-			NSString *iniString = [NSString stringWithFormat:@"[GENERAL]\nOutput=%@/TVGuide.xml\n\n"
-								   "[DIAGNOSTICS]\nTSFile=%@/epg.ts\nDebug=SETDSMCCPID-%u\n\n"
-								   "[DVBS]\nSatellite=1600\nDish=9750000,10750000,11700000,AB\nScanningFrequency=12456000,22500,3/4,H,MHEG5\n", 
+			NSString *iniString = [NSString stringWithFormat:@"Output=%@/TVGuide.xml\n\n"
+								   "TSFile=%@/epg.ts\nOption=MHEG5PID-%u\n\n"
+								   "ScanningFrequency=12456000,MHEG5\n", 
 								   [[self applicationSupportFolderURL] path], 
 								   [[self applicationSupportFolderURL] path], 
 								   _dsmccPID];
