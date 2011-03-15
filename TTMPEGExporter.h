@@ -28,6 +28,12 @@ typedef struct {
 	
 } TransportStreamPacket;
 
+typedef struct {
+	unsigned short pidArray[10];
+	uint32_t pidCount;	
+} avPIDArray;
+
+
 @interface TTMPEGExporter : NSObject {
 	
 	NSFileHandle *_streamHandle;
@@ -42,7 +48,7 @@ typedef struct {
 }
 
 // if >0, video PID for current stream
--(UInt16)videoPID;
+-(NSArray *)avPIDArray;
 
 // Updates EPG based on DSM-CC carousel for current channel
 -(void)updateEPG:(NSTimer *)timer;

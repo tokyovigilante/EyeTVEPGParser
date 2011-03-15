@@ -238,69 +238,61 @@ static long EyeTVEPGParserPacketsArrived(EyeTVEPGParserGlobals *globals, EyeTVPl
 	
 	if(globals && deviceID == globals->activeDeviceID) 
     {
-       	//long pidCount = globals->activePIDsCount;
-		//if(pidCount)
-		//void *packetBuffer = malloc(sizeof(TransportStreamPacket) * packetsCount);
-		[globals->exporter writePackets:*packets count:packetsCount];
-		return 0;
+       	long pidCount = globals->activePIDsCount;
+		if(pidCount)
 		{
-			//memcpy (packetBuffer, *packets, sizeof(TransportStreamPacket) * packetsCount));
-			while(packetsCount)
+			uint8_t *packetBuffer = (uint8_t *)malloc(sizeof(TransportStreamPacket) * packetsCount);
+			int packetBufferSize = 0;
+			while( packetsCount )
 			{
 				/* apply PID filtering, only PIDs in active service for device are sent through */
-				//long pid = ntohl(**packets)>>8 & 0x1FFFL;
+				long pid = ntohl(**packets)>>8 & 0x1FFFL;
 				/* ignore NULL packets */
-				//if( 0x1FFFL != pid )
+				if( 0x1FFFL != pid )
 				{
-					//for (SInt32 i=0; i<pidCount; ++i)
+					long i;
+					for( i=0; i<pidCount; ++i )
 					{
-						//if( globals->activePIDs[i].pid == pid )
+						if( globals->activePIDs[i].pid == pid)
 						{
-							{
-								/* copy packet in our buffer */
-								//if (packetAdded < 0)
-								{
-								//	return 0;
-								}
-							}
-							//if( i > 0 )
+							/* copy packet in our buffer */
+							memcpy(packetBuffer+packetBufferSize, *packets, sizeof(TransportStreamPacket));
+							packetBufferSize += sizeof(TransportStreamPacket);
+							
+							if( i > 0 )
 							{
 								/* if we assume that consecutive packets would have the same PID in most cases,
 								 it would therefore speed up filtering to reorder activePIDs list based on pid
 								 occurrences */
-								//EyeTVPluginPIDInfo swap = globals->activePIDs[i];
-								//do
+								EyeTVPluginPIDInfo swap = globals->activePIDs[i];
+								do
 								{
-								//	register int c = i--;
-								//	globals->activePIDs[c] = globals->activePIDs[i];
+									register int c = i--;
+									globals->activePIDs[c] = globals->activePIDs[i];
 								}
-								//while( i );
-								//globals->activePIDs[i] = swap;
+								while( i );
+								globals->activePIDs[i] = swap;
 							}
-							// disabled - don't block EyeTV from parsing packets - will interrupt stream
-#if 0
+							
 							if( pid && globals->activePIDs[0].pidType != kEyeTVPIDType_PMT )
 							{
 								/* to save on CPU, prevent EyeTV from mirroring that program by blocking video & audio packets
 								 by changing all packets but PAT and PMT to NULL PID */
 #if defined(WORDS_BIGENDIAN)
-							//	**packets |= 0x001FFF00L;
+								//**packets |= 0x001FFF00L;
 #else
-							//	**packets |= 0x00FFF800L;
+								//**packets |= 0x00FFF800L;
 #endif
 							}
-#endif
 							/* done filtering on this packet, move on to next packet */
-							++packets;
-							packetsCount--;
-						//	break;
+							break;
 						}
 					}
 				}
-				
+				--packetsCount;
+				++packets;
 			}
-			
-            
+			[globals->exporter writePackets:packetBuffer count:packetBufferSize];
         }
     }
 	[pool release];

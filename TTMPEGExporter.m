@@ -70,7 +70,7 @@
 		return NO;
 	}
 	
-	NSData *packetData = [[NSData alloc] initWithBytes:packets length:sizeof(TransportStreamPacket) * count];
+	NSData *packetData = [[NSData alloc] initWithBytes:packets length:count];
 
 	//dispatch_async(_streamWriteQueue, ^{
 		
@@ -93,7 +93,7 @@
 			{
 				[_streamHandle writeData:packetData];
 			}
-			_packetCount+= count;
+			_packetCount+= count / sizeof(TransportStreamPacket);
 			if (_packetCount % 1000 == 0)
 			{
 				NSLog(@"%llu packets written", _packetCount);
@@ -167,9 +167,18 @@
 			}
 			@try 
 			{
-				[NSTask launchedTaskWithLaunchPath:@"/usr/bin/mono"
-										 arguments:[NSArray arrayWithObjects:@"/Library/Application Support/EyeTV/Plugins/EyeTVEPGParser.bundle/Contents/Resources/EPGCollector/EPGCollector.exe",
-													[NSString stringWithFormat:@"/ini=%@", [iniURL path]], nil]];
+				NSTask *monoTask = [[NSTask alloc] init];
+				[monoTask setLaunchPath:@"/usr/bin/mono"];
+				[monoTask setArguments:[NSArray arrayWithObjects:@"/Library/Application Support/EyeTV/Plugins/EyeTVEPGParser.bundle/Contents/Resources/EPGCollector/EPGCollector.exe",
+																	[NSString stringWithFormat:@"/ini=%@", 
+																	 [iniURL path]], nil]];
+				[monoTask launch];
+				[monoTask waitUntilExit];
+				
+				if ([monoTask terminationStatus] != 0)
+				{
+					NSLog(@"EPG parse from TS failed");
+				}
 			}
 			@catch (NSException * e) 
 			{
@@ -177,14 +186,39 @@
 			}
 			@finally 
 			{
+				// remove TS
 				if (![[NSFileManager defaultManager] removeItemAtURL:[[self applicationSupportFolderURL] URLByAppendingPathComponent:@"epg.ts"] error:&err])
 				{
 					NSLog(@"Failed to remove epg TS dump - %@", [err localizedDescription]);
 				}
 			}
 			
-			// remove TS
-			return;
+			// load XML into EyeTV
+			
+			@try 
+			{
+				NSTask *importTask = [[NSTask alloc] init];
+				[importTask setLaunchPath:@"/usr/bin/open"];
+				[importTask setArguments:[NSArray arrayWithObjects:@"-ga",
+										  @"/Applications/EyeTV.app",
+										  [[[self applicationSupportFolderURL] URLByAppendingPathComponent:@"TVGuide.xml"] path],
+										  nil]];
+				[importTask launch];
+				//[importTask waitUntilExit];
+				
+				//if ([importTask terminationStatus] != 0)
+				{
+				//	NSLog(@"Import into EyeTV failed");
+				}
+			}
+			@catch (NSException * e) 
+			{
+				NSLog(@"Exception while running EyeTV import: %@", [e description]);
+			}
+			@finally 
+			{
+				
+			}
 		}
 	//});
 	
