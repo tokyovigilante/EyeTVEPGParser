@@ -10,11 +10,17 @@
 
 #import <Foundation/Foundation.h>
 
+typedef struct {
+	unsigned short pidArray[30];
+	uint32_t pidCount;	
+	uint16_t mheg5PID;
+} avPIDArray;
+
 @interface TTTransportStreamParser : NSObject
 {
-
+	
 }
 
-+(NSMutableDictionary *)parseDSMCC:(NSFileHandle *)fileHandle;
++(avPIDArray *)parseDSMCC:(NSFileHandle *)fileHandle;
 
 @end

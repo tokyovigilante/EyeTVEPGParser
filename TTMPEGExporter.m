@@ -8,8 +8,6 @@
 
 #import "TTMPEGExporter.h"
 
-#import "TTTransportStreamParser.h"
-
 @interface TTMPEGExporter (Private)
 
 -(NSURL *)applicationSupportFolderURL;
@@ -32,15 +30,14 @@
 													   repeats:YES];
 		_streamWriteQueue = dispatch_queue_create(NULL, NULL);
 		_wantPackets = NO;
-		_videoPID = 0;
 		
 	}
 	return self;
 }
 
--(UInt16)videoPID
+-(avPIDArray *)avPIDArray
 {
-	return _videoPID;
+	return _pidArray;
 }
 
 
@@ -93,7 +90,7 @@
 			{
 				[_streamHandle writeData:packetData];
 			}
-			_packetCount+= count / sizeof(TransportStreamPacket);
+			_packetCount += count / sizeof(TransportStreamPacket);
 			if (_packetCount % 1000 == 0)
 			{
 				NSLog(@"%llu packets written", _packetCount);
@@ -114,14 +111,14 @@
 			return;
 		}
 		CFAbsoluteTime now = CFAbsoluteTimeGetCurrent();
-		if (now - _firstPacketTime > 65)
+		if (_packetCount > 2000 && !_pidArray)
 		{
 			// should be ok to parse PIDs
 			[_streamHandle synchronizeFile];
 			[_streamHandle seekToFileOffset:0];
-			NSDictionary *pidDict = [TTTransportStreamParser parseDSMCC:_streamHandle];
+			_pidArray = [TTTransportStreamParser parseDSMCC:_streamHandle];
 			[_streamHandle seekToEndOfFile];
-			if (!pidDict)
+			if (!_pidArray)
 			{
 				NSLog(@"Error retrieving PIDs from transport stream");
 				[self closeTSStream];
@@ -129,15 +126,12 @@
 				_firstPacketTime = now;
 				return;
 			}
-			_dsmccPID = [[pidDict objectForKey:@"dsmccPID"] shortValue];
-			_videoPID = [[pidDict objectForKey:@"dsmccPID"] shortValue];
-			[pidDict release];
 		}
 		
 		if (now -_firstPacketTime > 65)
 		{
 			// parse EPG
-			if (_dsmccPID == 0)
+			if (_pidArray->mheg5PID == 0)
 			{
 				NSLog(@"No DSM-CC object found in carousel, cannot parse EPG");
 				return;
@@ -155,7 +149,7 @@
 								   "ScanningFrequency=12456000,MHEG5\n", 
 								   [[self applicationSupportFolderURL] path], 
 								   [[self applicationSupportFolderURL] path], 
-								   _dsmccPID];
+								   _pidArray->mheg5PID];
 			NSError *err = nil;
 			if (![iniString writeToURL:iniURL 
 							atomically:YES
@@ -217,7 +211,8 @@
 			}
 			@finally 
 			{
-				
+				free(_pidArray);
+				_pidArray = nil;
 			}
 		}
 	//});

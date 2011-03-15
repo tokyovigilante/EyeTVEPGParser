@@ -1249,7 +1249,7 @@ static void hb_ts_stream_find_pids(hb_stream_t *stream)
 
 @implementation TTTransportStreamParser
 
-+(NSMutableDictionary *)parseDSMCC:(NSFileHandle *)fileHandle
++(avPIDArray *)parseDSMCC:(NSFileHandle *)fileHandle
 {
 	if (!fileHandle)
 	{
@@ -1266,24 +1266,24 @@ static void hb_ts_stream_find_pids(hb_stream_t *stream)
 	
     d->file_handle = fileHandle;
 
-    if ( hb_stream_get_type( d ) != 0 )
+    if (hb_stream_get_type(d) == 0)
 	{
-		NSMutableDictionary *pidDict = [[NSMutableDictionary alloc] initWithCapacity:2];
-		
-		if (d->ts_number_video_pids)
-		{
-			[pidDict setObject:[NSNumber numberWithShort:d->ts_video_pids[0]] forKey:@"videoPID"];
-		}
-		else 
-		{
-			[pidDict setObject:[NSNumber numberWithShort:0] forKey:@"videoPID"];
-		}
-
+		avPIDArray *pidArray = (avPIDArray *)malloc(sizeof(avPIDArray));
 
 		if (d->hb_stream_type == transport)
 		{
+			pidArray->pidCount = 0;
+			pidArray->mheg5PID = 0;
 			UInt32 i;
-			[pidDict setObject:[NSNumber numberWithShort:0] forKey:@"videoPID"];
+			if (d->ts_number_video_pids)
+			{
+				for (i=0; i<d->ts_number_video_pids; i++)
+				{
+					pidArray->pidArray[pidArray->pidCount] = d->ts_video_pids[i];
+					pidArray->pidCount++;
+				}
+			}
+			
 			for ( i=0; i<d->ts_number_audio_pids; i++)
 			{
 				if (d->ts_stream_type[i+1] == 0x0b)
@@ -1291,12 +1291,17 @@ static void hb_ts_stream_find_pids(hb_stream_t *stream)
 					NSLog(@"Selected DSM-CC PID 0x%x (%u)", 
 						  d->ts_audio_pids[i],
 						  d->ts_audio_pids[i]);
-					[pidDict setObject:[NSNumber numberWithShort:d->ts_audio_pids[i]] forKey:@"dsmccPID"];
-					break;
+					pidArray->mheg5PID = d->ts_audio_pids[i];
 				}
+				else 
+				{
+					pidArray->pidArray[pidArray->pidCount] = d->ts_audio_pids[i];
+					pidArray->pidCount++;
+				}
+
 			}
 		}
-		return pidDict;
+		return pidArray;
 	}
 	d->file_handle = NULL;
 	

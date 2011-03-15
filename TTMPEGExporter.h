@@ -8,6 +8,7 @@
 
 #import <Cocoa/Cocoa.h>
 
+#import "TTTransportStreamParser.h"
 
 /**************************************************************************************
  *
@@ -28,12 +29,6 @@ typedef struct {
 	
 } TransportStreamPacket;
 
-typedef struct {
-	unsigned short pidArray[10];
-	uint32_t pidCount;	
-} avPIDArray;
-
-
 @interface TTMPEGExporter : NSObject {
 	
 	NSFileHandle *_streamHandle;
@@ -41,14 +36,14 @@ typedef struct {
 	CFAbsoluteTime _firstPacketTime;
 	BOOL _wantPackets;
 	UInt64 _packetCount;
-	UInt16 _dsmccPID, _videoPID;
+	avPIDArray *_pidArray;
 	dispatch_queue_t _streamWriteQueue;
 	
 	NSTimer *_updateTimer;
 }
 
 // if >0, video PID for current stream
--(NSArray *)avPIDArray;
+-(avPIDArray *)avPIDArray;
 
 // Updates EPG based on DSM-CC carousel for current channel
 -(void)updateEPG:(NSTimer *)timer;
