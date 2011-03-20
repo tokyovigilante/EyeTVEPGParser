@@ -6,7 +6,7 @@ Plugin for EyeTV using the official SDK to parse out MHEG-5 EPG (Electronic Prog
 
 This is entirely legal and does not violate copyright, as the EPG data is provided in the DVB-T stream to your decoder for your personal use.
 
-It runs automatically every hour and when the channel is changed. It should not interfere with live TV or recordings (apart from the issues below, which are being worked on), and is completely passive.
+It runs automatically every hour and when the channel is changed. It should not interfere with live TV or recordings (apart from the issues below, which are being worked on), is completely passive and does not require internet access.
 
 ## Usage
 
@@ -16,11 +16,11 @@ It runs automatically every hour and when the channel is changed. It should not 
 
 ## Issues
 
-The code is very early, and may cause EyeTV to stutter temporarily as the data is collected and parsed (no more than a minute). This is due to current complete lack of threads, and is being worked on.
+The code is very early, and may cause EyeTV to stutter temporarily as the data is collected and parsed (no more than a minute). This is due to current complete lack of threads, and is being worked on. There are some crashing bugs, but if the parser completes the XML data is imported. Restart EyeTV and set up channel mappings as before (these aren't saved till a clean exit from EyeTV - Sorry).
 
 Currently settings for NZ DVB-T are hardcoded. I need DVB-S and international testers, and I'll work on modifying the code to be more flexible.
 
-Intel-only, if anyone needs a PPC build ask me, or alternative the code should work fine recompiled.
+Intel-only, if anyone needs a PPC build ask me, or alternatively the code should work fine recompiled.
 
 Logging is only to stdout for now, check Console.app for output. I'm working on file logging and maybe GUI feedback via Growl.
 
