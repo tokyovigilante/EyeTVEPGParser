@@ -24,6 +24,12 @@ Intel-only, if anyone needs a PPC build ask me, or alternative the code should w
 
 Logging is only to stdout for now, check Console.app for output. I'm working on file logging and maybe GUI feedback via Growl.
 
+## Building
+
+I've tested with Xcode 3.2 on OS X 10.6 (Intel). You're on your own otherwise (although I can't see a reason this wouldn't work on 10.5/PPC).
+
+You can't debug plugins directly, you need to run the EyeTV executable from within Xcode after building the plugin and copying it to /L/AS/EyeTV/Plugins. EyeTV prevents the debugger attaching using [PT_DENY_ATTACH](http://landonf.bikemonkey.org/code/macosx/Leopard_PT_DENY_ATTACH.20080122.html). This needs to be overridden using [this kernel extension](https://github.com/dwalters/pt_deny_attach) (Thanks to [Landon Fuller](http://landonf.bikemonkey.org/) and [Dan Walters](https://github.com/dwalters)). 
+
 ## Feedback
 
 Welcome and requested - to the [Issues page](https://github.com/tokyovigilante/EyeTVEPGParser/issues) here, on the [Geekzone forums](http://www.geekzone.co.nz/forums.asp?forumid=126&topicid=79270), or by [email](https://github.com/inbox/new).
